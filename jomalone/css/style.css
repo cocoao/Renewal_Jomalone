@@ -1,0 +1,65 @@
+/* logo box style */
+header{position:relative; left: 50px; width: 100%; z-index: 100;}
+header .logoBox{width: calc(100% - 50px); height: 110px; background: #111; _opacity: 0.8;}
+header .logoBox .logo{height: 100%; padding: 20px 0;}
+header .logoBox .logo img{height: 100%; margin: auto;}
+
+header.pixHeader{position: fixed; top:0; left: 50px; z-index: 100; width: 100%;}
+header.pixHeader .logoBox{height: 60px; width: calc(100% - 50px); background: #111;}
+header.pixHeader .logoBox .logo{padding: 10px 0;}
+
+/* navigation style */
+.miniGnb{width: 50px; height: 100%;background: #fff; position: fixed; border-right: 1px solid #ddd; z-index: 150; display: flex; justify-content: center;}
+.miniGnb i{font-weight: 700; font-size: 25px; text-align: center; padding: 20px 0;}
+
+.gnbBox{width: 110px; height: 100%; background: #fff; position: fixed; border-right: 1px solid #ddd; z-index: 200;}
+.gnbBox .miniGnbDEl{width: 100%;display: flex; justify-content: center;}
+.gnbBox i{font-weight: 700; font-size: 25px; text-align: center; padding: 20px 0;}
+.gnbBox .gnb{width:100%; height:calc(100% - 70px); margin: auto; display: flex; justify-content: center; align-items: center; flex-direction: column;}
+.gnbBox .gnb li{width:100%; height:16.66%; text-align: center; text-transform: uppercase; display: flex; justify-content: center; align-items: center; }
+.gnbBox .gnb li a{font-family: 'Lato'; font-weight: 700;}
+.gnbBox .gnb li:hover,.gnbBox .gnb li.active{background: #111;}
+.gnbBox .gnb li:hover a,.gnbBox .gnb li.active a{color: #fff;}
+.gnbBox.hidden{display: none;}
+
+/* main slide style */
+.mainSlide{width: 100%; height: auto; display: flex; justify-content: center; flex-direction: column; align-items: center;}
+.slideBox{width: 100%; height: 500px;}
+.slideImg{width: 100%; height: 500px; background-repeat: no-repeat; background-size: cover;}
+
+.linkBox{width: 100%; padding: 50px 0 30px; display: flex; justify-content: center;}
+.linkBox a{width: 25%; font-family: 'Lato'; text-align: center; padding: 5px 40px; border:1px solid #111; align-items: center; justify-content: center; display: flex; font-size: 12px; text-transform: uppercase; cursor: pointer;}
+.linkBox a:nth-child(2){margin: 0 30px;}
+.linkBox a:hover{background: #111; color: #fff;}
+
+.allow{display: flex; flex-direction: column; margin-bottom: 50px;}
+.allow i{font-size: 50px; line-height: 0.3;}    
+.allow i:nth-child(1){animation: icon linear 0.9s 0s infinite;}
+.allow i:nth-child(2){animation: icon linear 0.9s 0.3s infinite;}
+.allow i:nth-child(3){animation: icon linear 0.9s 0.6s infinite;}
+
+
+/* main_new section style */
+.mainNewBox{width: 100%; height: 100vh; position: relative;}
+.bottleImg{width: 30%; height: auto; margin: auto; display: flex; justify-content:center; _align-items: center; z-index: 10; top:27%; left: 50%; transform: translateX(-50%); position: fixed; margin-left: 55px;}
+.bottleImg .img{width:100%; height:500px; background: url('/jomalone/img/main_bottle.png') no-repeat center center; background-size: contain; _background-attachment: fixed;}
+
+.mainNewBox{width: 100%; height: auto;}
+.mainNewBox .bgAttach{width:100%; background-repeat: no-repeat; background-size: cover;background-attachment: fixed; height: 100vh; _margin-top:100px; background-position: center; overflow: hidden; _position: relative; z-index: -100;}
+.mainNewBox .mainNewBg{background-image: url('/jomalone/img/main_bg_new.jpg');}
+.mainNewBox .mainBestBg{background-image: url('/jomalone/img/main_bg_best.jpeg');}
+
+
+/* .mainNewBg{width: 100%; height: 100vh;}
+.mainNewBg img{width: 100%; height: auto;} */
+/* .bgImg{width:100%; height:100%; background: url('/jomalone/img/main_bg_new.jpg')no-repeat center center; background-size: cover; background-attachment: fixed;display : inline-block; overflow : auto;} */
+
+/* .bgImg{width: 100%; height: 100vh; overflow-y: scroll; position: relative; scrollbar-width: none;}
+.bgImg::-webkit-scrollbar{display: none;}
+.bgImg img{width: 100%;} */
+
+.label{width: 10%; height: auto; top: 48%; position: fixed; left: 50%; transform: translateX(-15px); z-index: 15;}
+.label img{width: 100%;}
+
+.texBox{position: fixed; top: 50%; z-index: 20; width: 80%; display: flex; justify-content: space-between;}
+.texBox h3{width: 30%; font-size: 40px;}
