@@ -15,36 +15,30 @@ $(window).scroll(function(){
 
 // navigation
 $(".miniGnb").click(function(){
-  $(".gnbBox.hidden").show();
+  $(".gnbBox.hidden").css({"left":"0"});
 });
 $(".miniGnbDEl").click(function(){
-  $(".gnbBox.hidden").hide();
-});
-});
-
-$(function() {
-  $(".slideImg").bgSlideShow();
+  $(".gnbBox.hidden").css({"left":"-150px"});
 });
 
-// $(function () {
-//   $(".slideImg").bgSlideShow({
-//     current : 3,
-//     images : ["/jomalone/img/main_slider_01.jpg,/jomalone/img/main_slider_02.jpg,/jomalone/img/main_slider_03.jpg"],
-//     transitionDelay : 5000, // 5 seconds
-//     transitionSpeed : 3000, // 3 seconds
-//     transitionEffect : 'fade-in',
-//     randomize : false, 
-//     initialBackground : 'random',
-//     debug : true,
-//     eventHandlers : {
-//       beforeInit: myBeforeInitFunc,
-//       afterInit: myAfterInitFunc,
-//       beforeChange : myBeforeChangeFunc,
-//       afterChange : myAfterChangeFunc
-//      },
-//      slideControls: {
-//        enabled: true,
-//        classes: 'something'
-//      }
-//   });
-// });
+// main slider
+$(".slideImg").bgSlideShow();
+
+const mainBoxTop = $(".mainNewBox").offset().top;
+
+console.log(mainBoxTop);
+$(".allow").click(function(){
+  $("html,body").animate({scrollTop:mainBoxTop});
+});
+
+
+$(window).scroll(function(){
+  var scroll = $(window).scrollTop();
+
+  if(scroll > mainBoxTop + 80){
+    $('.contentsBox').addClass('fixed');
+  } else {
+    $('.contentsBox').removeClass('fixed');
+  }
+});
+});

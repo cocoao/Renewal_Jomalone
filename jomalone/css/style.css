@@ -20,7 +20,7 @@ header.pixHeader .logoBox .logo{padding: 10px 0;}
 .gnbBox .gnb li a{font-family: 'Lato'; font-weight: 700;}
 .gnbBox .gnb li:hover,.gnbBox .gnb li.active{background: #111;}
 .gnbBox .gnb li:hover a,.gnbBox .gnb li.active a{color: #fff;}
-.gnbBox.hidden{display: none;}
+.gnbBox.hidden{position: fixed; left: -150px; height: 100vh; transition: all 0.4s;}
 
 /* main slide style */
 .mainSlide{width: 100%; height: auto; display: flex; justify-content: center; flex-direction: column; align-items: center;}
@@ -40,15 +40,25 @@ header.pixHeader .logoBox .logo{padding: 10px 0;}
 
 
 /* main_new section style */
-.mainNewBox{width: 100%; height: 100vh; position: relative;}
-.bottleImg{width: 30%; height: auto; margin: auto; display: flex; justify-content:center; _align-items: center; z-index: 10; top:27%; left: 50%; transform: translateX(-50%); position: fixed; margin-left: 55px;}
-.bottleImg .img{width:100%; height:500px; background: url('/jomalone/img/main_bottle.png') no-repeat center center; background-size: contain; _background-attachment: fixed;}
+.mainNewBox{width: 100%; height: auto; position: relative;}
+.contentsBox{width: 100%; height: 100vh; display: inline; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-45%);}
+.contentsBox.fixed{position:fixed; margin-left: 25px;}
+.bottleImg{width: 30%; height: auto; margin: auto; display: flex; justify-content:center; _align-items: center; z-index: 10; top:50%; left: 50%; transform: translate(-65%, -60%); position: absolute;}
+.bottleImg .img{width:100%; height:500px; background: url('/jomalone/img/main_bottle.png') no-repeat center center; background-size: contain;}
 
-.mainNewBox{width: 100%; height: auto;}
-.mainNewBox .bgAttach{width:100%; background-repeat: no-repeat; background-size: cover;background-attachment: fixed; height: 100vh; _margin-top:100px; background-position: center; overflow: hidden; _position: relative; z-index: -100;}
+.label{width: 13%; height: auto; top: 15%; position: absolute; left: 39%; _transform: translateX(-50%); z-index: 15;}
+.label img{width: 100%;}
+
+.texBox{position: absolute; top: 32%; z-index: 20; width: 75%; display: flex; justify-content: space-between; margin-left: 16%; height: 48vh;}
+.texBox h3{width: 33.33%; font-size: 40px; text-align: right; font-family: 'Lato';}
+.texBox .txtBtn{width: 33.33%; right: 10%; position: absolute; bottom: 0;}
+.txtBtn p{display: block; margin-bottom: 25px;}
+.txtBtn a{padding: 5px 30px; background: #111; color: #fff; border: 1px solid #111;}
+.texBox span{width: 33.33%;}
+
+.mainNewBox .bgAttach{width:100%; background-repeat: no-repeat; background-size: cover;background-attachment: fixed; height: 150vh; background-position: center; overflow: hidden; position: relative; z-index: -100;}
 .mainNewBox .mainNewBg{background-image: url('/jomalone/img/main_bg_new.jpg');}
 .mainNewBox .mainBestBg{background-image: url('/jomalone/img/main_bg_best.jpeg');}
-
 
 /* .mainNewBg{width: 100%; height: 100vh;}
 .mainNewBg img{width: 100%; height: auto;} */
@@ -57,9 +67,3 @@ header.pixHeader .logoBox .logo{padding: 10px 0;}
 /* .bgImg{width: 100%; height: 100vh; overflow-y: scroll; position: relative; scrollbar-width: none;}
 .bgImg::-webkit-scrollbar{display: none;}
 .bgImg img{width: 100%;} */
-
-.label{width: 10%; height: auto; top: 48%; position: fixed; left: 50%; transform: translateX(-15px); z-index: 15;}
-.label img{width: 100%;}
-
-.texBox{position: fixed; top: 50%; z-index: 20; width: 80%; display: flex; justify-content: space-between;}
-.texBox h3{width: 30%; font-size: 40px;}

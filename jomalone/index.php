@@ -68,21 +68,31 @@
       </div>
     </section>
     <section class="mainNewBox">
-      <!-- <div class="label">
-        <img src="/jomalone/img/main_label_bluebell.jpg" alt="">
+     <div class="contentsBox">
+      <div class="texBox">  
+        <h3>WILD BLUEBELL DECORATED COLLECTION</h3>
+        <span class="bottle">
+        <div class="label">
+          <img src="/jomalone/img/main_label_bluebell.jpg" alt="">
+        </div>
+        <div class="bottleImg clear">
+          <div class="img"></div>
+        </div>
+        </span>
+        <span class="txtBtn">
+          <p>숲 속 깊은 곳에서 빛나고 있는 사파이어. 이슬 맺힌 블루벨의 은은하고 달콤한 향기에 산골짜기 백합, 들장미, 달콤한 감향이 더해졌습니다. 최면을 걸 듯 마음을 사로잡는 향수입니다.</p>
+          <a href="#">자세히 보기</a>
+        </span>
       </div>
-     <div class="texBox">  
-       <h3>WILD BLUEBELL DECORATED COLLECTION</h3>
-       <p>숲 속 깊은 곳에서 빛나고 있는 사파이어. 이슬 맺힌 블루벨의 은은하고 달콤한 향기에 산골짜기 백합, 들장미, 달콤한 감향이 더해졌습니다. 최면을 걸 듯 마음을 사로잡는 향수입니 </p>
-     </div>
-     <div class="bottleImg clear">
-        <div class="img"></div>
-      </div> -->
-      
-      <div class="bgAttach mainNewBg clear"></div>
-      <div class="bgAttach mainBestBg clear"></div>
 
-    </section>
+     </div>
+      <div class="bgAttach mainNewBg clear">
+      </div>
+      </section>
+      <section class="mainNewBox">
+      <div class="bgAttach mainBestBg clear"></div>
+      </section>
+
   </div>
 </div>
 </body>
