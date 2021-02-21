@@ -1,11 +1,11 @@
 /* logo box style */
 header{position:relative; left: 50px; width: 100%; z-index: 100;}
-header .logoBox{width: calc(100% - 50px); height: 110px; background: #111; _opacity: 0.8;}
+header .logoBox{width: calc(100% - 50px); height: 110px; background: #111;}
 header .logoBox .logo{height: 100%; padding: 20px 0;}
 header .logoBox .logo img{height: 100%; margin: auto;}
 
 header.pixHeader{position: fixed; top:0; left: 50px; z-index: 100; width: 100%;}
-header.pixHeader .logoBox{height: 60px; width: calc(100% - 50px); background: #111;}
+header.pixHeader .logoBox{height: 60px; width: calc(100% - 50px); background: #111; opacity: 0.9;}
 header.pixHeader .logoBox .logo{padding: 10px 0;}
 
 /* navigation style */
@@ -40,30 +40,36 @@ header.pixHeader .logoBox .logo{padding: 10px 0;}
 
 
 /* main_new section style */
-.mainNewBox{width: 100%; height: auto; position: relative;}
-.contentsBox{width: 100%; height: 100vh; display: inline; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-45%);}
+.mainBox{width: 100%; height: auto; position: relative;}
+.contentsBox{width: 100%; height: 100vh; display: inline; _position: absolute; top: 50%; left: 50%; transform: translate(-50%,-45%);}
 .contentsBox.fixed{position:fixed; margin-left: 25px;}
 .bottleImg{width: 30%; height: auto; margin: auto; display: flex; justify-content:center; _align-items: center; z-index: 10; top:50%; left: 50%; transform: translate(-65%, -60%); position: absolute;}
 .bottleImg .img{width:100%; height:500px; background: url('/jomalone/img/main_bottle.png') no-repeat center center; background-size: contain;}
 
-.label{width: 13%; height: auto; top: 15%; position: absolute; left: 39%; _transform: translateX(-50%); z-index: 15;}
+.label{width: 13%; height: auto; top: 15%; position: absolute; left: 39%; _transform: translateX(-50%); z-index: 1000;}
 .label img{width: 100%;}
 
 .texBox{position: absolute; top: 32%; z-index: 20; width: 75%; display: flex; justify-content: space-between; margin-left: 16%; height: 48vh;}
-.texBox h3{width: 33.33%; font-size: 40px; text-align: right; font-family: 'Lato';}
-.texBox .txtBtn{width: 33.33%; right: 10%; position: absolute; bottom: 0;}
+.texBox h3{width: 33.33%; font-size: 40px; text-align: right; font-family: 'Lato'; text-transform: uppercase;}
+.texBox h3 a{font-size: 16px; font-weight: 400; line-height: 3;}
+.texBox .txtBtn{width: 33.33%; right: 10%; position: absolute; bottom: 0; padding-right: 5%;}
 .txtBtn p{display: block; margin-bottom: 25px;}
 .txtBtn a{padding: 5px 30px; background: #111; color: #fff; border: 1px solid #111;}
 .texBox span{width: 33.33%;}
+.bestCon, .allCon{display: none;}
 
-.mainNewBox .bgAttach{width:100%; background-repeat: no-repeat; background-size: cover;background-attachment: fixed; height: 150vh; background-position: center; overflow: hidden; position: relative; z-index: -100;}
-.mainNewBox .mainNewBg{background-image: url('/jomalone/img/main_bg_new.jpg');}
-.mainNewBox .mainBestBg{background-image: url('/jomalone/img/main_bg_best.jpeg');}
+.mainBox .bgAttach{width:100%; background-repeat: no-repeat; background-size: cover;background-attachment: fixed; height: 150vh; background-position: center; overflow: hidden; position: relative; z-index: -100;}
+.mainBox .mainNewBg{background-image: url('/jomalone/img/main_bg_new.jpg');}
+.mainBox .mainBestBg{background-image: url('/jomalone/img/main_bg_best.jpg');}
+.mainBox .mainAllBg{background-image: url('/jomalone/img/main_bg_all.jpg');}
 
-/* .mainNewBg{width: 100%; height: 100vh;}
-.mainNewBg img{width: 100%; height: auto;} */
-/* .bgImg{width:100%; height:100%; background: url('/jomalone/img/main_bg_new.jpg')no-repeat center center; background-size: cover; background-attachment: fixed;display : inline-block; overflow : auto;} */
+.boutique{width: 100%; height: auto; padding: 30px 0; display: flex; justify-content: center; align-items: center;}
+.boutique a{text-align: center;  font-family: 'Lato'; font-weight: 700; font-size: 20px; animation: text linear 0.5s 0s infinite alternate;}
+.boutique a p{text-align: center;  font-family: 'Noto Sans KR'; font-weight: 500; font-size: 14px; line-height: 2;}
 
-/* .bgImg{width: 100%; height: 100vh; overflow-y: scroll; position: relative; scrollbar-width: none;}
-.bgImg::-webkit-scrollbar{display: none;}
-.bgImg img{width: 100%;} */
+.otherBox{width: 100%; height: auto; display: flex; justify-content: space-between; align-items: center; flex-direction: row;}
+.otherBox>div{width: 25%; height: auto; display: flex; justify-content: center; align-items: center; position: relative;}
+.otherBox>div img{width: 100%;}
+.otherBox .hover{background: rgba(0,0,0,0.8); width: 100%; height: 100%; _display: flex; justify-content: center; align-items: center; position: absolute; display: none;}
+.otherBox .hover a{font-size: 14px; padding: 5px 15px; border: 1px solid #fff; color: #fff; font-family: 'Lato'; font-weight: 500;}
+.otherBox>div:hover .hover{display: flex;}
