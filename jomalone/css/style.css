@@ -9,14 +9,17 @@ header.pixHeader .logoBox{height: 60px; width: calc(100% - 50px); background: #1
 header.pixHeader .logoBox .logo{padding: 10px 0;}
 
 /* navigation style */
-.miniGnb{width: 50px; height: 100%;background: #fff; position: fixed; border-right: 1px solid #ddd; z-index: 150; display: flex; justify-content: center;}
+.miniGnb{width: 50px; height: 100%;background: #fff; position: fixed; _border-right: 1px solid #ddd; z-index: 150; display: flex; justify-content: center; flex-direction: column; align-items: center; box-shadow: 2px 3px 1px rgb(0 0 0 / 30%);}
 .miniGnb i{font-weight: 700; font-size: 25px; text-align: center; padding: 20px 0;}
+.miniGnb i.fa-bars{top: 0; position: absolute;}
+.miniGnb .miniMenu{bottom: 0; position: absolute; display: flex; justify-content: center; flex-direction: column;}
+.miniGnb .miniMenu i:nth-child(1){padding-bottom: 0;}
 
-.gnbBox{width: 110px; height: 100%; background: #fff; position: fixed; border-right: 1px solid #ddd; z-index: 200;}
+.gnbBox{width: 110px; height: 100%; background: #fff; position: fixed; _border-right: 1px solid #ddd; z-index: 200; box-shadow: 2px 3px 1px rgb(0 0 0 / 30%);}
 .gnbBox .miniGnbDEl{width: 100%;display: flex; justify-content: center;}
 .gnbBox i{font-weight: 700; font-size: 25px; text-align: center; padding: 20px 0;}
-.gnbBox .gnb{width:100%; height:calc(100% - 70px); margin: auto; display: flex; justify-content: center; align-items: center; flex-direction: column;}
-.gnbBox .gnb li{width:100%; height:16.66%; text-align: center; text-transform: uppercase; display: flex; justify-content: center; align-items: center; }
+.gnbBox .gnb{width:100%; height:calc(100% - 70px); margin: auto; display: flex; justify-content: space-between; align-items: center; flex-direction: column; position: absolute; bottom: 0;}
+.gnbBox .gnb li{width:100%; height:100%; text-align: center; text-transform: uppercase; display: flex; justify-content: center; align-items: center; }
 .gnbBox .gnb li a{font-family: 'Lato'; font-weight: 700;}
 .gnbBox .gnb li:hover,.gnbBox .gnb li.active{background: #111;}
 .gnbBox .gnb li:hover a,.gnbBox .gnb li.active a{color: #fff;}
@@ -28,7 +31,7 @@ header.pixHeader .logoBox .logo{padding: 10px 0;}
 .slideImg{width: 100%; height: 500px; background-repeat: no-repeat; background-size: cover;}
 
 .linkBox{width: 100%; padding: 50px 0 30px; display: flex; justify-content: center;}
-.linkBox a{width: 25%; font-family: 'Lato'; text-align: center; padding: 5px 40px; border:1px solid #111; align-items: center; justify-content: center; display: flex; font-size: 12px; text-transform: uppercase; cursor: pointer;}
+.linkBox a{width: 25%; font-family: 'Lato'; text-align: center; padding: 10px 0; border:1px solid #111; align-items: center; justify-content: center; display: flex; font-size: 12px; text-transform: uppercase; cursor: pointer;}
 .linkBox a:nth-child(2){margin: 0 30px;}
 .linkBox a:hover{background: #111; color: #fff;}
 
@@ -40,23 +43,25 @@ header.pixHeader .logoBox .logo{padding: 10px 0;}
 
 
 /* main_new section style */
+.relBox{position: relative; width: 100vw; height: 100vh;}
 .mainBox{width: 100%; height: auto; position: relative;}
-.contentsBox{width: 100%; height: 100vh; display: inline; _position: absolute; top: 50%; left: 50%; transform: translate(-50%,-45%);}
-.contentsBox.fixed{position:fixed; margin-left: 25px;}
-.bottleImg{width: 30%; height: auto; margin: auto; display: flex; justify-content:center; _align-items: center; z-index: 10; top:50%; left: 50%; transform: translate(-65%, -60%); position: absolute;}
+.contentsBox{width: 100%; height: 100vh; display: inline; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
+.contentsBox.fixed{position:fixed; margin-left: 50px; margin-top: 60px;}
+.bottleImg{width: 100%; height: auto; margin: auto; display: flex; justify-content:center; _align-items: center; z-index: 10; top:50%; left: 50%; transform: translate(-50%, -60%); position: absolute;padding: 3%;}
 .bottleImg .img{width:100%; height:500px; background: url('/jomalone/img/main_bottle.png') no-repeat center center; background-size: contain;}
 
-.label{width: 13%; height: auto; top: 15%; position: absolute; left: 39%; _transform: translateX(-50%); z-index: 1000;}
+.label{width: 70%; height: auto; top: 15%; position: absolute; left: 50%; transform: translateX(-50%); z-index: 1000;}
 .label img{width: 100%;}
 
-.texBox{position: absolute; top: 32%; z-index: 20; width: 75%; display: flex; justify-content: space-between; margin-left: 16%; height: 48vh;}
-.texBox h3{width: 33.33%; font-size: 40px; text-align: right; font-family: 'Lato'; text-transform: uppercase;}
+.texBox{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-28%); z-index: 20; width: 80%; display: flex; justify-content: space-between;height: 48vh;}
+.texBox h3{width: 40%; font-size: 40px; text-align: right; font-family: 'Lato'; text-transform: uppercase; padding-right:5%; margin-top: -2%;}
 .texBox h3 a{font-size: 16px; font-weight: 400; line-height: 3;}
-.texBox .txtBtn{width: 33.33%; right: 10%; position: absolute; bottom: 0; padding-right: 5%;}
+.texBox .txtBtn{width: 40%; position: relative; display: flex; padding: 0 10% 0 5%; flex-direction: column; justify-content: flex-end;}
 .txtBtn p{display: block; margin-bottom: 25px;}
-.txtBtn a{padding: 5px 30px; background: #111; color: #fff; border: 1px solid #111;}
-.texBox span{width: 33.33%;}
+.txtBtn a{padding: 5px 30px; background: #111; color: #fff; border: 1px solid #111; text-align: center;}
+/* .texBox span{width: 33.33%;} */
 .bestCon, .allCon{display: none;}
+.texBox span.bottle{display: flex; justify-content: center; align-items: center; width: 20%; position: relative;}
 
 .mainBox .bgAttach{width:100%; background-repeat: no-repeat; background-size: cover;background-attachment: fixed; height: 150vh; background-position: center; overflow: hidden; position: relative; z-index: -100;}
 .mainBox .mainNewBg{background-image: url('/jomalone/img/main_bg_new.jpg');}
@@ -64,8 +69,10 @@ header.pixHeader .logoBox .logo{padding: 10px 0;}
 .mainBox .mainAllBg{background-image: url('/jomalone/img/main_bg_all.jpg');}
 
 .boutique{width: 100%; height: auto; padding: 30px 0; display: flex; justify-content: center; align-items: center;}
-.boutique a{text-align: center;  font-family: 'Lato'; font-weight: 700; font-size: 20px; animation: text linear 0.5s 0s infinite alternate;}
+.boutique a{text-align: center;  font-family: 'Lato'; font-weight: 700; font-size: 20px;}
 .boutique a p{text-align: center;  font-family: 'Noto Sans KR'; font-weight: 500; font-size: 14px; line-height: 2;}
+.boutique:hover{background: #111;}
+.boutique:hover a{color: #fff;}
 
 .otherBox{width: 100%; height: auto; display: flex; justify-content: space-between; align-items: center; flex-direction: row;}
 .otherBox>div{width: 25%; height: auto; display: flex; justify-content: center; align-items: center; position: relative;}
@@ -73,3 +80,15 @@ header.pixHeader .logoBox .logo{padding: 10px 0;}
 .otherBox .hover{background: rgba(0,0,0,0.8); width: 100%; height: 100%; _display: flex; justify-content: center; align-items: center; position: absolute; display: none;}
 .otherBox .hover a{font-size: 14px; padding: 5px 15px; border: 1px solid #fff; color: #fff; font-family: 'Lato'; font-weight: 500;}
 .otherBox>div:hover .hover{display: flex;}
+
+footer{width: calc(100% - 50px); height: 60px; background: #111; display: flex; justify-content: space-between; align-items: center; margin-left: 50px; position: relative;}
+footer p{width:40%; font-size: 14px; font-family: 'Lato'; font-weight: 600; color: #fff; padding-left: 30px;}
+/* footer>div{width: 35%; padding: 0 30px; z-index: 50;} */
+/* footer .snsBox{display: flex; width: 20%; height: 100%; align-items: center;}
+footer .snsBox a{display: flex; justify-content: center; align-items: center;}
+footer .snsBox i{font-size: 18px; color: #fff; transition: all 0.4s; margin-right: 25px; width: 30px;}
+footer .snsBox i:hover{font-size: 24px;} */
+
+footer .footerBtn{text-align: right; width: 60%; padding-right: 40px;}
+footer .footerBtn a{color: #fff; font-size: 12px; margin-left: 25px;}
+footer .footerBtn a:hover{text-decoration: underline;}

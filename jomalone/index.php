@@ -17,6 +17,8 @@
   <link rel="stylesheet" href="/jomalone/css/style.css">
   <link rel="stylesheet" href="/jomalone/css/animation.css">
   <link rel="stylesheet" href="/jomalone/plugin/jquery-bg-slideshow.css">
+  <link rel="stylesheet" href="/jomalone/css/media.css">
+
 
   <!-- jqeury link -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -29,6 +31,10 @@
     <div class="nav">
       <div class="miniGnb">
         <i class="fa fa-bars"></i>
+        <div class="miniMenu">
+          <i class="fa fa-search"></i>
+          <i class="fa fa-user"></i>
+        </div>
       </div>
       <div class="gnbBox hidden">
         <div class="miniGnbDEl">
@@ -57,7 +63,7 @@
         </div>
       </div>
       <div class="linkBox">
-        <a href="#">Jomalone London<br>Town House</a>
+        <a href="#">Town House</a>
         <a href="#">At Your Service</a>
         <a href="#">All Scents</a>
       </div>
@@ -69,21 +75,23 @@
     </section>
     <section class="mainBox newBox">
      <div class="contentsBox newCon">
-      <div class="texBox">  
-        <h3><a href="#">NEW PRODUCTS</a><br>
-        WILD BLUEBELL DECORATED COLLECTION</h3>
-        <span class="bottle">
-          <div class="label">
-            <img src="/jomalone/img/main_label_bluebell.jpg" alt="">
-          </div>
-          <div class="bottleImg clear">
-            <div class="img"></div>
-          </div>
-        </span>
-        <span class="txtBtn">
-          <p>숲 속 깊은 곳에서 빛나고 있는 사파이어. 이슬 맺힌 블루벨의 은은하고 달콤한 향기에 산골짜기 백합, 들장미, 달콤한 감향이 더해졌습니다. 최면을 걸 듯 마음을 사로잡는 향수입니다.</p>
-          <a href="#">자세히 보기</a>
-        </span>
+       <div class="relBox">
+        <div class="texBox">  
+          <h3><a href="#">NEW PRODUCTS</a><br>
+          WILD BLUEBELL DECORATED COLLECTION</h3>
+          <span class="bottle">
+            <div class="label">
+              <img src="/jomalone/img/main_label_bluebell.jpg" alt="">
+            </div>
+            <div class="bottleImg clear">
+              <div class="img"></div>
+            </div>
+          </span>
+          <span class="txtBtn">
+            <p>숲 속 깊은 곳에서 빛나고 있는 사파이어. 이슬 맺힌 블루벨의 은은하고 달콤한 향기에 산골짜기 백합, 들장미, 달콤한 감향이 더해졌습니다. 최면을 걸 듯 마음을 사로잡는 향수입니다.</p>
+            <a href="#">자세히 보기</a>
+          </span>
+        </div>
       </div>
      </div>
      <div class="bgAttach mainNewBg clear"></div>
@@ -91,6 +99,7 @@
     
     <section class="mainBox bestBox">
      <div class="contentsBox bestCon">
+     <div class="relBox">
       <div class="texBox">  
         <h3><a href="#">BEST PRODUCTS</a><br>
         English Pear & Freesia <br>Cologne</h3>
@@ -107,12 +116,14 @@
           <a href="#">자세히 보기</a>
         </span>
       </div>
-     </div>
+      </div>
+      </div>
      <div class="bgAttach mainBestBg clear"></div>
     </section>
 
     <section class="mainBox allBox">
      <div class="contentsBox allCon">
+     <div class="relBox">
       <div class="texBox">  
         <h3><a href="#">ALL PRODUCTS</a><br>
         Wood Sage & Sea Salt <br>Cologne</h3>
@@ -128,6 +139,7 @@
           <p>바람부는 해안을 따라 걸으며 일상을 벗어나보세요. 하얗게 부서지는 파도, 소금기를 머금은 신선한 바다 공기. 험준한 절벽에서 느껴지는 투박한 자연의 향기와 세이지의 우디한 흙 내음이 어우러져 자유롭고 활기찬 에너지와 즐거움이 가득합니다.</p>
           <a href="#">자세히 보기</a>
         </span>
+      </div>
       </div>
      </div>
      <div class="bgAttach mainAllBg clear"></div>
@@ -162,6 +174,21 @@
       </div>
     </section>
   </div>
+
+<footer>
+  <p>©JO MALONE LONDON</p>
+  <!-- <div class="snsBox">  
+    <a href="https://www.facebook.com/JoMaloneLondon/"><i class="fa fa-facebook"></i></a>
+    <a href="https://twitter.com/JoMaloneLondon/"><i class="fa fa-twitter"></i></a>
+    <a href="https://www.pinterest.co.kr/jomalonelondon/_shop/"><i class="fa fa-pinterest"></i></a>
+    <a href="https://www.instagram.com/jomalonelondon/"><i class="fa fa-instagram"></i></a>
+  </div> -->
+  <div class="footerBtn">
+    <a href="#">이용약관 및 개인정보 처리방침</a>
+    <a href="#">매장 안내</a>
+    <a href="#">고객 관리 지원팀</a>
+  </div>
+</footer>
 </div>
 </body>
 </html>

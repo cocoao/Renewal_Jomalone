@@ -1,0 +1,58 @@
+@media screen and (max-width : 1200px){
+  .slideBox, .slideImg{height: 450px;}
+  header .logoBox{height: 90px;}
+  .texBox{width: 95%; height: 40vh; padding-right: 50px;}
+  .texBox h3{font-size: 34px; padding-right: 3%;}
+  .texBox .txtBtn{padding: 0px 7% 5% 3%;}
+  footer .footerBtn a{margin-left: 15px;}
+  .boutique{padding: 20px 0;}
+}
+
+@media screen and (max-width : 900px){
+  .slideBox, .slideImg{height: 400px;}
+  .linkBox a:nth-child(2){margin: 0 20px;}
+  .allow{margin-bottom: 30px;}
+  .allow i{font-size: 40px;}
+  .texBox{width: 80%; padding-right: 50px;}
+  .texBox h3{font-size: 34px; width: 50%;}
+  .bottleImg{padding: 15%;}
+  .texBox span.bottle{width: 50%;}
+  .texBox .txtBtn{display: none;}
+  .label{width: 50%;}
+  .label{top: 10%;}
+  footer .footerBtn a{margin-left: 10px;}
+}
+
+@media screen and (max-width : 750px){
+  .slideBox, .slideImg{height: 350px;}
+  .otherBox{flex-wrap: wrap;}
+  .otherBox>div{width: 50%;}
+  footer .footerBtn{display: none;}
+  footer p{text-align: center; width: 100%; padding: 0;}
+  .label{top: 15%;}
+}
+
+@media screen and (max-width : 600px){
+  .slideBox, .slideImg{height: 300px;}
+  .linkBox a{width: 28%;}
+  .linkBox a:nth-child(2){margin: 0 10px;}
+  .mainBox .bgAttach{height: 100vh;}
+  .mainBox .mainNewBg{height: 150vh;}
+  .texBox{height: 30vh;}
+  .bottleImg{padding: 10%;}
+  .label{top: 7%; width: 55%;}
+  .texBox h3{font-size: 28px; width: 60%;}
+  .texBox{width: 90%; padding-right: 60px;}
+}
+
+@media screen and (max-width : 480px){
+  .miniGnb{width: 40px;}
+  .gnbBox{width: 95px;}
+  .gnbBox .gnb li{font-size: 12px;}
+  header{left: 40px;}
+  header .logoBox{width: calc(100% - 40px);}
+  .center{width: calc(100% - 40px); margin-left: 40px;}
+  .slideBox, .slideImg{height: 200px;}
+  .contentsBox.fixed{margin-left: 40px;}
+  .texBox{display: flex; flex-direction: column; justify-content: center; align-items: center;}
+}

@@ -1,10 +1,10 @@
 $(function(){
 
+history.scrollRestoration = "manual"
+
 // header fix
 $(window).scroll(function(){
   var scroll = $(window).scrollTop();
-
-      // console.log(scroll);
 
   if (scroll > 50){
     $('.header').addClass('pixHeader');
@@ -25,15 +25,13 @@ $(".miniGnbDEl").click(function(){
 $(".slideImg").bgSlideShow();
 
 
+
 const mainNewTop = $(".newBox").offset().top;
 const bestBoxTop = $(".bestBox").offset().top;
 const allBoxTop = $(".allBox").offset().top;
 const otherBoxTop = $(".otherBox").offset().top;
 
-// console.log(otherBoxTop);
-
 // allow click scroll down
-// console.log(mainNewTop);
 $(".allow").click(function(){
   $("html,body").animate({scrollTop:mainNewTop});
 });
@@ -42,10 +40,9 @@ $(".allow").click(function(){
 $(window).scroll(function(){
   var scroll = $(window).scrollTop();
 
-  if(scroll > mainNewTop){
+  if(scroll > mainNewTop + 50 && scroll < allBoxTop + 200){
     $('.contentsBox').addClass('fixed');
-  }
-  else{
+  }else{
     $('.contentsBox').removeClass('fixed');
   }
 });
@@ -67,6 +64,9 @@ $(window).scroll(function(){
     $('.newCon').hide();
     $('.bestCon').hide();
     $('.allCon').show();
+  }
+  if(scroll > allBoxTop + 200){
+  $('.allCon').css({"display":"inline"});
   }
 });
 
