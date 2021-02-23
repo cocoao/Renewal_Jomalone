@@ -1,9 +1,8 @@
 @media screen and (max-width : 1200px){
   .slideBox, .slideImg{height: 450px;}
-  header .logoBox{height: 90px;}
-  .texBox{width: 95%; height: 40vh; padding-right: 50px;}
-  .texBox h3{font-size: 34px; padding-right: 3%;}
-  .texBox .txtBtn{padding: 0px 7% 5% 3%;}
+  .logoBox{height: 90px;}
+  .texBox{width: 95%; _height: 40vh; padding-right: 50px;}
+  .texBox .titBox h3{font-size: 34px;}
   footer .footerBtn a{margin-left: 15px;}
   .boutique{padding: 20px 0;}
 }
@@ -14,12 +13,13 @@
   .allow{margin-bottom: 30px;}
   .allow i{font-size: 40px;}
   .texBox{width: 80%; padding-right: 50px;}
-  .texBox h3{font-size: 34px; width: 50%;}
+  .texBox .titBox{width: 50%; padding: 0;}
+  .texBox .titBox h3{font-size: 34px;}
+  .texBox .titBox a{font-size: 14px;}
   .bottleImg{padding: 15%;}
   .texBox span.bottle{width: 50%;}
   .texBox .txtBtn{display: none;}
-  .label{width: 50%;}
-  .label{top: 10%;}
+  .label{width: 80%;}
   footer .footerBtn a{margin-left: 10px;}
 }
 
@@ -29,30 +29,36 @@
   .otherBox>div{width: 50%;}
   footer .footerBtn{display: none;}
   footer p{text-align: center; width: 100%; padding: 0;}
-  .label{top: 15%;}
+  .label{top: 45%;}
 }
 
 @media screen and (max-width : 600px){
   .slideBox, .slideImg{height: 300px;}
   .linkBox a{width: 28%;}
   .linkBox a:nth-child(2){margin: 0 10px;}
-  .mainBox .bgAttach{height: 100vh;}
-  .mainBox .mainNewBg{height: 150vh;}
   .texBox{height: 30vh;}
   .bottleImg{padding: 10%;}
-  .label{top: 7%; width: 55%;}
-  .texBox h3{font-size: 28px; width: 60%;}
+  .texBox .titBox{width: 60%;}
+  .texBox .titBox h3{font-size: 28px;}
   .texBox{width: 90%; padding-right: 60px;}
 }
 
 @media screen and (max-width : 480px){
-  .miniGnb{width: 40px;}
-  .gnbBox{width: 95px;}
-  .gnbBox .gnb li{font-size: 12px;}
-  header{left: 40px;}
-  header .logoBox{width: calc(100% - 40px);}
-  .center{width: calc(100% - 40px); margin-left: 40px;}
+  .logoBox{width: 100%; left: 0; height: 60px;}
+  .logoBox .logo{padding: 10px 0;}
+  .pixHeader.logoBox{width: 100%;}
+  header{left: 0;}
+  header .nav{background: 0; box-shadow: none;}
+  header .miniGnb{height: 60px; padding: 0 10px; z-index: 1000; left: 0;}
+  header .miniGnb .miniMenu{display: none;}
+  header .miniGnb i.fa-bars{color: #fff; font-size: 24px; top:50%; left: 50%; transform: translate(-50%,-50%);}
+
+  .center{width: 100%; margin-left: 0;}
   .slideBox, .slideImg{height: 200px;}
-  .contentsBox.fixed{margin-left: 40px;}
-  .texBox{display: flex; flex-direction: column; justify-content: center; align-items: center;}
+  .contentsBox{margin: 0; padding: 0;}
+  .texBox{padding: 0;}
+  /* .contentsBox.fixed{margin-left: 40px;}
+  .texBox{display: flex; flex-direction: column; justify-content: center; align-items: center;} */
+
+  footer{width: 100%; margin-left:0; height: 50px;}
 }

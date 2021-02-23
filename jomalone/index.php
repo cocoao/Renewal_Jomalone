@@ -28,6 +28,13 @@
 </head>
 <body>
   <div class="wrap">
+    <div class="logoBox">
+      <div class="logo">
+        <a href="/jomalone/index.php"><img src="/jomalone/img/jomalone_logo_w.png" alt="jomalone_logo"></a>
+        <h2>JO MALONE LONDON</h2>
+      </div>
+    </div>
+  <header class="header">
     <div class="nav">
       <div class="miniGnb">
         <i class="fa fa-bars"></i>
@@ -51,10 +58,6 @@
         </ul>
       </div>
    </div>
-  <header class="header">
-    <div class="logoBox">
-      <div class="logo"><img src="/jomalone/img/jomalone_logo_w.png" alt="jomalone_logo"></div>
-    </div>
   </header>
   <div class="center">
     <section class="mainSlide clear">
@@ -63,9 +66,9 @@
         </div>
       </div>
       <div class="linkBox">
-        <a href="#">Town House</a>
-        <a href="#">At Your Service</a>
-        <a href="#">All Scents</a>
+        <a href="#" class="newPro">NEW PRODUCTS</a>
+        <a href="#" class="bestPro">BEST PRODUCTS</a>
+        <a href="#" class="allPro">ALL PRODUCTS</a>
       </div>
       <div class="allow">
         <i class="fa fa-angle-down"></i>
@@ -73,12 +76,15 @@
         <i class="fa fa-angle-down"></i>
       </div>
     </section>
-    <section class="mainBox newBox">
-     <div class="contentsBox newCon">
+    
+<div class="imgSection">
+    <div class="contentsBox newCon">
        <div class="relBox">
         <div class="texBox">  
-          <h3><a href="#">NEW PRODUCTS</a><br>
-          WILD BLUEBELL DECORATED COLLECTION</h3>
+          <div class="titBox">
+            <a href="#">NEW PRODUCTS</a><br>
+            <h3>WILD BLUEBELL DECORATED COLLECTION</h3>
+          </div>
           <span class="bottle">
             <div class="label">
               <img src="/jomalone/img/main_label_bluebell.jpg" alt="">
@@ -94,11 +100,13 @@
         </div>
       </div>
      </div>
+
+    <section class="mainBox newBox">
      <div class="bgAttach mainNewBg clear"></div>
     </section>
     
     <section class="mainBox bestBox">
-     <div class="contentsBox bestCon">
+     <!-- <div class="contentsBox bestCon">
      <div class="relBox">
       <div class="texBox">  
         <h3><a href="#">BEST PRODUCTS</a><br>
@@ -117,16 +125,16 @@
         </span>
       </div>
       </div>
-      </div>
+      </div> -->
      <div class="bgAttach mainBestBg clear"></div>
     </section>
 
     <section class="mainBox allBox">
-     <div class="contentsBox allCon">
+     <!-- <div class="contentsBox allCon">
      <div class="relBox">
       <div class="texBox">  
         <h3><a href="#">ALL PRODUCTS</a><br>
-        Wood Sage & Sea Salt <br>Cologne</h3>
+        Wood Sage & <br>Sea Salt <br>Cologne</h3>
         <span class="bottle">
           <div class="label">
             <img src="/jomalone/img/main_label_woodsage.jpg" alt="">
@@ -141,9 +149,11 @@
         </span>
       </div>
       </div>
-     </div>
+     </div> -->
      <div class="bgAttach mainAllBg clear"></div>
     </section>
+</div>
+
     <div class="boutique">
       <a href="#">AT YOUR SERVICE<p>온라인 부티크 혜택</p></a>
     </div>
