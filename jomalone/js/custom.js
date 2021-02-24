@@ -2,6 +2,13 @@ $(function(){
 
   history.scrollRestoration = "manual"
 
+  var mainNewTop = $(".newBox").offset().top;
+  var bestBoxTop = $(".bestBox").offset().top;
+  var allBoxTop = $(".allBox").offset().top;
+  var otherBoxTop = $(".otherBox").offset().top;
+  var winWidth = $(window).width();
+
+
   // header fix
   $(window).scroll(function(){
     var scroll = $(window).scrollTop();
@@ -25,19 +32,22 @@ $(function(){
     $(".miniGnb").css({"display":"flex"});
   });
 
+  if(winWidth <= 480){
+    $(".miniGnb").click(function(){
+      $(".gnbBox.hidden").css({"left":"50%"});
+      $(".miniGnb").css({"display":"none"});
+      $(".nav").css({"width":"100vw"})
+    });
+    $(".miniGnbDEl").click(function(){
+      $(".gnbBox.hidden").css({"left":"-150px"});
+      $(".nav").css({"width":"50px"})
+      $(".miniGnb").css({"display":"flex"});
+    });
+  
+  }
   // main slider
   $(".slideImg").bgSlideShow();
 
-
-  
-
-  const mainNewTop = $(".newBox").offset().top;
-  const bestBoxTop = $(".bestBox").offset().top;
-  const allBoxTop = $(".allBox").offset().top;
-  const otherBoxTop = $(".otherBox").offset().top;
-  const winWidth = $(window).width();
-
-  // console.log(winWidth);
   // btns click scroll down
   $(".allow").click(function(){
     $("html,body").animate({scrollTop:mainNewTop});
@@ -60,17 +70,25 @@ $(function(){
   $(window).resize(function(){
     const txtwinWidth = $(window).width();
     const txtBoxWid = txtwinWidth * 0.25;
-    $(".texBox").css({"height":txtBoxWid});
+    if(txtwinWidth <= 480){
+      $(".texBox").css({"height":"25vh"});
+    } else {
+      $(".texBox").css({"height":txtBoxWid});
+    }
   });
   const txtwinWidth = $(window).width();
   const txtBoxWid = txtwinWidth * 0.25;
-  $(".texBox").css({"height":txtBoxWid});
-
+  if(txtwinWidth <= 480){
+    $(".texBox").css({"height":"25vh"});
+  } else {
+    $(".texBox").css({"height":txtBoxWid});
+  };
 
   // contents fixed when scroll
-  $(window).scroll(function(){
+  $(window).resize(function(){
     var scroll = $(window).scrollTop();
     var sectionTop = $(".imgSection").offset().top;
+    var allBoxTop = $(".allBox").offset().top;
 
     if(sectionTop - 150 <= scroll && scroll < allBoxTop + 300){
       $(".contentsBox").show();
@@ -81,18 +99,36 @@ $(function(){
       $(".contentsBox").hide();
       $(".contentsBox").removeClass("hide");
     }
+  });
+  
+  $(window).scroll(function(){
+    var scroll = $(window).scrollTop();
+    var sectionTop = $(".imgSection").offset().top;
+    const allBoxTop = $(".allBox").offset().top;
+
+    if(sectionTop - 150 <= scroll && scroll < allBoxTop + 200){
+      $(".contentsBox").show();
+      $(".contentsBox").removeClass("hide");
+    } else if(scroll = allBoxTop + 200){
+      $(".contentsBox").addClass("hide");
+    } else if(sectionTop - 150 > scroll && scroll > allBoxTop + 200){
+      $(".contentsBox").hide();
+      $(".contentsBox").removeClass("hide");
+    }
 
     var scroll = $(window).scrollTop();
     let titleSec = $('.texBox .titBox a');
     let tilte = $('.texBox .titBox h3');
     let labelImg = $('.label img');
     let textCon = $('.txtBtn p')
-
+    let textBtn = $('.txtBtn a')
+    
     if(scroll > mainNewTop && scroll < bestBoxTop - 500){
       titleSec.text("NEW PRODUCTS");
-      tilte.text("WILD BLUEBELL DECORATED COLLECTION");
+      tilte.text("Wild Bluebell Decorated collection");
       labelImg.attr("src", "/jomalone/img/main_label_bluebell.jpg");
       textCon.text("숲 속 깊은 곳에서 빛나고 있는 사파이어. 이슬 맺힌 블루벨의 은은하고 달콤한 향기에 산골짜기 백합, 들장미, 달콤한 감향이 더해졌습니다. 최면을 걸 듯 마음을 사로잡는 향수입니다.");
+      // textBtn.attr("href","/jomalone/pages/fragrance.php");
       }
     else if(scroll > bestBoxTop -500 && scroll < allBoxTop -500){
       titleSec.text("BEST PRODUCTS");
@@ -105,8 +141,8 @@ $(function(){
       tilte.text("Wood Sage & Sea Salt Cologne");
       labelImg.attr("src", "/jomalone/img/main_label_woodsage.jpg");
       textCon.text("바람부는 해안을 따라 걸으며 일상을 벗어나보세요. 하얗게 부서지는 파도, 소금기를 머금은 신선한 바다 공기. 험준한 절벽에서 느껴지는 투박한 자연의 향기와 세이지의 우디한 흙 내음이 어우러져 자유롭고 활기찬 에너지와 즐거움이 가득합니다.");
+      textBtn.attr("href","/jomalone/pages/fragrance.php");
     }
-    
   });
 
   // function scrollFixed(){

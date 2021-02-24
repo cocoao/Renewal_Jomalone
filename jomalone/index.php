@@ -28,41 +28,15 @@
 </head>
 <body>
   <div class="wrap">
-    <div class="logoBox">
-      <div class="logo">
-        <a href="/jomalone/index.php"><img src="/jomalone/img/jomalone_logo_w.png" alt="jomalone_logo"></a>
-        <h2>JO MALONE LONDON</h2>
-      </div>
-    </div>
-  <header class="header">
-    <div class="nav">
-      <div class="miniGnb">
-        <i class="fa fa-bars"></i>
-        <div class="miniMenu">
-          <i class="fa fa-search"></i>
-          <i class="fa fa-user"></i>
-        </div>
-      </div>
-      <div class="gnbBox hidden">
-        <div class="miniGnbDEl">
-          <i class="fa fa-times"></i>
-        </div>
-        <ul class="gnb">
-          <li><a href="#">new</a></li>
-          <li><a href="#">best</a></li>
-          <li><a href="#">FRAGRANCE</a></li>
-          <li><a href="#">bath<br>& body</a></li>
-          <li><a href="#">home</a></li>
-          <li><a href="#">gift</a></li>
-          <li><a href="#">gents</a></li>
-        </ul>
-      </div>
-   </div>
-  </header>
+
+<?php
+include $_SERVER["DOCUMENT_ROOT"]."/jomalone/include/header.php"
+?>
+
   <div class="center">
     <section class="mainSlide clear">
       <div class="slideBox">
-        <div class='slideImg' data-current="0" data-images="/jomalone/img/main_slider_01.jpg,/jomalone/img/main_slider_02.jpg,/jomalone/img/main_slider_03.jpg" data-transitionDelay="3000" data-transitionSpeed="3000" data-transitionEffect="fade-in" data-randomize="true"   data-initialBackground="2" data-debug="false">
+        <div class='slideImg' data-current="0" data-images="/jomalone/img/main_slider_01.jpg,/jomalone/img/main_slider_02.jpg,/jomalone/img/main_slider_03.jpg" data-transitionDelay="2000" data-transitionSpeed="2000" data-transitionEffect="fade-in" data-randomize="true"   data-initialBackground="2" data-debug="false">
         </div>
       </div>
       <div class="linkBox">
@@ -83,14 +57,15 @@
         <div class="texBox">  
           <div class="titBox">
             <a href="#">NEW PRODUCTS</a><br>
-            <h3>WILD BLUEBELL DECORATED COLLECTION</h3>
+            <h3>Wild Bluebell Decorated collection</h3>
           </div>
           <span class="bottle">
             <div class="label">
               <img src="/jomalone/img/main_label_bluebell.jpg" alt="">
             </div>
             <div class="bottleImg clear">
-              <div class="img"></div>
+              <img src="/jomalone/img/main_bottle.png" alt="">
+              <!-- <div class="img"></div> -->
             </div>
           </span>
           <span class="txtBtn">
@@ -106,50 +81,10 @@
     </section>
     
     <section class="mainBox bestBox">
-     <!-- <div class="contentsBox bestCon">
-     <div class="relBox">
-      <div class="texBox">  
-        <h3><a href="#">BEST PRODUCTS</a><br>
-        English Pear & Freesia <br>Cologne</h3>
-        <span class="bottle">
-          <div class="label">
-            <img src="/jomalone/img/main_label_pearFreesia.jpg" alt="">
-          </div>
-          <div class="bottleImg clear">
-            <div class="img"></div>
-          </div>
-        </span>
-        <span class="txtBtn">
-          <p>가을의 정수. 화이트 프리지아 부케향에 이제 막 익은 배의 신선함을 입히고 호박, 파출리, 우디향으로 은은함을 더했습니다.</p>
-          <a href="#">자세히 보기</a>
-        </span>
-      </div>
-      </div>
-      </div> -->
      <div class="bgAttach mainBestBg clear"></div>
     </section>
 
     <section class="mainBox allBox">
-     <!-- <div class="contentsBox allCon">
-     <div class="relBox">
-      <div class="texBox">  
-        <h3><a href="#">ALL PRODUCTS</a><br>
-        Wood Sage & <br>Sea Salt <br>Cologne</h3>
-        <span class="bottle">
-          <div class="label">
-            <img src="/jomalone/img/main_label_woodsage.jpg" alt="">
-          </div>
-          <div class="bottleImg clear">
-            <div class="img"></div>
-          </div>
-        </span>
-        <span class="txtBtn">
-          <p>바람부는 해안을 따라 걸으며 일상을 벗어나보세요. 하얗게 부서지는 파도, 소금기를 머금은 신선한 바다 공기. 험준한 절벽에서 느껴지는 투박한 자연의 향기와 세이지의 우디한 흙 내음이 어우러져 자유롭고 활기찬 에너지와 즐거움이 가득합니다.</p>
-          <a href="#">자세히 보기</a>
-        </span>
-      </div>
-      </div>
-     </div> -->
      <div class="bgAttach mainAllBg clear"></div>
     </section>
 </div>
@@ -185,20 +120,10 @@
     </section>
   </div>
 
-<footer>
-  <p>©JO MALONE LONDON</p>
-  <!-- <div class="snsBox">  
-    <a href="https://www.facebook.com/JoMaloneLondon/"><i class="fa fa-facebook"></i></a>
-    <a href="https://twitter.com/JoMaloneLondon/"><i class="fa fa-twitter"></i></a>
-    <a href="https://www.pinterest.co.kr/jomalonelondon/_shop/"><i class="fa fa-pinterest"></i></a>
-    <a href="https://www.instagram.com/jomalonelondon/"><i class="fa fa-instagram"></i></a>
-  </div> -->
-  <div class="footerBtn">
-    <a href="#">이용약관 및 개인정보 처리방침</a>
-    <a href="#">매장 안내</a>
-    <a href="#">고객 관리 지원팀</a>
-  </div>
-</footer>
+  <?php
+  include $_SERVER["DOCUMENT_ROOT"]."/jomalone/include/footer.php"
+  ?>
+
 </div>
 </body>
 </html>

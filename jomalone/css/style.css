@@ -1,8 +1,8 @@
 /* logo box style */
-.logoBox{width: calc(100% - 50px); height: 110px; background: #111; position:relative; left: 50px; z-index: 100;}
+.logoBox{width: calc(100% - 50px); height: 110px; background: #111; position:relative; left: 50px; z-index: 1000;}
 .logoBox .logo{height: 100%; padding: 20px 0;}
 .logoBox .logo img{height: 100%; margin: auto;}
-.logoBox .logo h2{position: absolute; top: -1000px;}
+.logoBox .logo h2{position: absolute; opacity: 0;}
 
 .pixHeader{position: fixed; top:0; left: 50px; z-index: 100; width: 100%;}
 .pixHeader.logoBox{height: 60px; width: calc(100% - 50px); background: #111; opacity: 0.9;}
@@ -10,7 +10,7 @@
 
 /* navigation style */
 header{height: 100vh; position: fixed; top: 0; z-index: 999;}
-header .nav{width: 50px; height:100vh; background: #fff; box-shadow: 2px 3px 1px rgb(0 0 0 / 30%);transition: all 0.4s;}
+header .nav{width: 50px; height:100vh; background: #fcf9ef; box-shadow: 2px 3px 1px rgb(0 0 0 / 30%);transition: all 0.4s;}
 /* header .header.on{width: 110px; background: #fff;} */
 header .miniGnb{width: 50px; height: 100%;_background: #fff; position: fixed; _border-right: 1px solid #ddd; z-index: 150; display: flex; justify-content: center; flex-direction: column; align-items: center;}
 header .miniGnb i{font-weight: 700; font-size: 25px; text-align: center; padding: 20px 0;}
@@ -23,7 +23,7 @@ header .gnbBox .miniGnbDEl{width: 100%;display: flex; justify-content: center;}
 header .gnbBox i{font-weight: 700; font-size: 25px; text-align: center; padding: 20px 0;}
 header .gnbBox .gnb{width:100%; height:calc(100% - 70px); margin: auto; display: flex; justify-content: space-between; align-items: center; flex-direction: column; position: absolute; bottom: 0;}
 header .gnbBox .gnb li{width:100%; height:100%; text-align: center; text-transform: uppercase; display: flex; justify-content: center; align-items: center; }
-header .gnbBox .gnb li a{font-family: 'Lato'; font-weight: 700;}
+header .gnbBox .gnb li a{font-family: 'lora'; font-weight: 500;}
 header .gnbBox .gnb li:hover,.gnbBox .gnb li.active{background: #111;}
 header .gnbBox .gnb li:hover a,.gnbBox .gnb li.active a{color: #fff;}
 header .gnbBox.hidden{position: fixed; left: -150px; height: 100vh; transition: all 0.4s;}
@@ -33,8 +33,8 @@ header .gnbBox.hidden{position: fixed; left: -150px; height: 100vh; transition: 
 .slideBox{width: 100%; height: 500px;}
 .slideImg{width: 100%; height: 500px; background-repeat: no-repeat; background-size: cover;}
 
-.linkBox{width: 100%; padding: 50px 0 30px; display: flex; justify-content: center;}
-.linkBox a{width: 25%; font-family: 'Lato'; text-align: center; padding: 10px 0; border:1px solid #111; align-items: center; justify-content: center; display: flex; font-size: 12px; text-transform: uppercase; cursor: pointer;}
+.linkBox{width: 100%; padding: 50px 0 30px; display: flex; justify-content: center; z-index: 999;}
+.linkBox a{width: 25%; font-family: 'lora'; text-align: center; padding: 10px 0; border:1px solid #111; align-items: center; justify-content: center; display: flex; font-size: 12px; text-transform: uppercase; cursor: pointer;}
 .linkBox a:nth-child(2){margin: 0 30px;}
 .linkBox a:hover{background: #111; color: #fff;}
 
@@ -47,15 +47,15 @@ header .gnbBox.hidden{position: fixed; left: -150px; height: 100vh; transition: 
 
 /* main_new section style */
 .imgSection{width: 100%; height: 100%; position: relative;}
-.relBox{position: relative; width: 100vw; height: 100vh;}
+.relBox{position: relative; width: 100vw; height: 100vh; }
 .mainBox{width: 100%; height: auto; position: relative;}
-.contentsBox{width: 100%; height: 100vh; display: none; position: fixed; top: 0%; left: 50%; transform: translate(-50%, -50px); margin-left: 50px; padding-top: 60px; animation: slideUp 0.2s 1; animation-fill-mode: forwards;}
+.contentsBox{width: 100%; height: 100vh; display: none; position: fixed; top: 0%; left: 50%; transform: translate(-50%, -50px); margin-left: 50px; padding-top: 60px; animation: slideUp 0.2s 1; animation-fill-mode: forwards;z-index: 500;}
 .contentsBox.hide{animation: slideUpRe 0.2s 1; display: none; animation-fill-mode: forwards;}
 
 .bottleImg{width: 100%; height: auto; margin: auto; display: flex; justify-content:center; _align-items: center; z-index: 10; top:50%; left: 50%; transform: translate(-50%, -60%); position: absolute;padding: 3%;}
-.bottleImg .img{width:100%; height:500px; background: url('/jomalone/img/main_bottle.png') no-repeat center center; background-size: contain;}
-
-.label{width: 100%; height: auto; top: 50%; position: absolute; left: 50%; transform: translate(-50%,-55%); z-index: 1000; padding: 15%;}
+/* .bottleImg .img{width:100%; height:500px; background: url('/jomalone/img/main_bottle.png') no-repeat center center; background-size: contain;} */
+.bottleImg img{width: 100%;}
+.label{width: 100%; height: auto; top: 50%; position: absolute; left: 50%; transform: translate(-50%,-55%); z-index: 100; padding: 15%;}
 .label img{width: 100%;}
 
 .texBox{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-28%); z-index: 20; width: 80%; display: flex; justify-content: space-between;height: 48vh; padding-right: 50px;}
@@ -64,18 +64,18 @@ header .gnbBox.hidden{position: fixed; left: -150px; height: 100vh; transition: 
 .texBox .titBox a{font-size: 16px; font-weight: 400; line-height: 2;}
 .texBox .txtBtn{width: 40%; position: relative; display: flex; padding: 0 10% 0 5%; flex-direction: column; justify-content: flex-end;}
 .txtBtn p{display: block; margin-bottom: 25px;}
-.txtBtn a{padding: 5px 30px; background: #111; color: #fff; border: 1px solid #111; text-align: center;}
+.txtBtn a{padding: 5px 30px; background: #111; color: #fff; border: 1px solid #111; text-align: center; cursor: pointer;}
 /* .texBox span{width: 33.33%;} */
 .bestCon, .allCon{display: none;}
 .texBox span.bottle{display: flex; justify-content: center; align-items: center; width: 20%; position: relative;}
 
-.mainBox .bgAttach{width:100%; background-repeat: no-repeat; background-size: cover;background-attachment: fixed; height: 150vh; background-position: center; overflow: hidden; position: relative; z-index: -100;}
+.mainBox .bgAttach{width:100%; background-repeat: no-repeat; background-size: cover;background-attachment: fixed; height: 150vh; background-position: center; overflow: hidden; position: relative; z-index: 0;}
 .mainBox .mainNewBg{background-image: url('/jomalone/img/main_bg_new.jpg');}
 .mainBox .mainBestBg{background-image: url('/jomalone/img/main_bg_best.jpg');}
 .mainBox .mainAllBg{background-image: url('/jomalone/img/main_bg_all.jpg');}
 
 .boutique{width: 100%; height: auto; padding: 30px 0; display: flex; justify-content: center; align-items: center;}
-.boutique a{text-align: center;  font-family: 'Lato'; font-weight: 700; font-size: 20px;}
+.boutique a{text-align: center;  font-family: 'lora'; font-weight: 700; font-size: 20px;}
 .boutique a p{text-align: center;  font-family: 'Noto Sans KR'; font-weight: 500; font-size: 14px; line-height: 2;}
 .boutique:hover{background: #111;}
 .boutique:hover a{color: #fff;}
