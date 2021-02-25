@@ -20,7 +20,7 @@
       <ul class="gnb">
         <li><a href="#">new</a></li>
         <li><a href="#">best</a></li>
-        <li><a href="/jomalone/pages/fragrance.php">FRAGRANCE</a></li>
+        <li class="active"><a href="/jomalone/pages/fragrance.php">FRAGRANCE</a></li>
         <li><a href="#">bath<br>& body</a></li>
         <li><a href="#">home</a></li>
         <li><a href="#">gift</a></li>

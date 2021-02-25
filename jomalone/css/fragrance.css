@@ -1,29 +1,24 @@
 /* slide style */
-.scentsSlideBox{position: relative; width: 100%; height: 250px;overflow: hidden;}
-.slider-container{width: 100%; height: 100%; position: relative;}
-.scenSlides{width: 100%;position: absolute;}
-.scenSlides:nth-child(1){left: 0;}
-.scenSlides:nth-child(2){left: 100%;}
-.scenSlides:nth-child(3){left: 200%;}
-.scenSlides:nth-child(4){left: 300%;}
-.scenSlides:nth-child(5){left: 400%;}
-.scenSlides:nth-child(6){left: 500%;}
+.scentsSlideBox{width: 100%; height: auto; position: relative;}
+#loop-slider{position:relative; overflow:hidden; width:100vw; height:250px; max-width: 100%;}
+#img-group{position:relative; margin:0; padding:0; transform:translateX(-100vw); transition:transform 300ms ease-in-out;
+-webkit-transition: transform 300ms ease-in-out;}
+.slide{position:relative; display:inline;float:left; width:100vw; max-width: 100%; height:250px; top:0; margin:0; padding:0; z-index:990; background-size:cover; background-position:center; background-repeat:no-repeat;}
 
-.scenSlides img{height: 100%; object-fit: cover; object-position: center; position: relative;}
-.scenSlides .scentxtBox{width: 50%; height: auto; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 50; position: absolute; display: flex; _justify-content: center; align-items: center; flex-direction: row;}
-.scenSlides h4{width:30%; font-size: 30px; _font-family: 'Lato'; _position: absolute; text-align: right; font-family: 'lora'; font-weight: 400;}
-.scenSlides hr{width: 0; border:0; border-bottom: 1px solid #111; padding: 12px; margin: 0 10px;  animation: slideHr 1s 1; animation-fill-mode: forwards;z-index: 500;}
-.scenSlides p{width:40%; font-size: 14px;}
+.slide .scentxtBox{width: 50%; height: auto; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 50; position: absolute; display: flex; _justify-content: center; align-items: center; flex-direction: row;}
+.slide h4{width:30%; font-size: 30px; _font-family: 'Lato'; _position: absolute; text-align: right; font-family: 'lora'; font-weight: 400;}
+.slide hr{width: 0; border:0; border-bottom: 1px solid #111; padding: 12px; margin: 0 10px;  animation: slideHr 1s 1; animation-fill-mode: forwards;z-index: 500;}
+.slide p{width:50%; font-size: 14px;}
 
 /* Next & previous buttons */
-.prev, .next { cursor: pointer; position: absolute; top: 50%; width: auto; margin-top: -30px; padding: 16px; color: #fff; font-weight: bold;font-size: 20px; border-radius: 0 3px 3px 0; user-select: none;}
+.prev, .next { cursor: pointer; position: absolute; top: 50%; width: auto; margin-top: -30px; padding: 16px; color: #fff; font-weight: bold;font-size: 20px; border-radius: 0 3px 3px 0; user-select: none; opacity: 0.5; transition: all 0.4s;}
 .next {right: 0; border-radius: 3px 0 0 3px;}
-.prev:hover, .next:hover {background-color: rgba(0,0,0,0.8);color: #fff;}
+.prev:hover, .next:hover{opacity: 0.8; font-size: 23px;}
 
 /* The dot/bullet/indicator container */
-.dot-container {text-align: center;padding: 15px; position: absolute; bottom: 10px; z-index: 500; left: 50%; transform: translateX(-50%); z-index: 1;}
+/* .dot-container {text-align: center;padding: 15px; position: absolute; bottom: 10px; z-index: 500; left: 50%; transform: translateX(-50%); z-index: 1;}
 .dot {cursor: pointer; height: 10px; width: 10px; margin: 0 5px; background-color: #fff; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease;}
-.active, .dot:hover {background-color: #111;}
+.active, .dot:hover {background-color: #111;} */
 
 /* productBoxes style */
 .productSection{width: 100%; height: auto; padding: 50px 0}
@@ -37,9 +32,9 @@
 .productFilter .button-group button:hover,.productFilter .button-group button.active{font-weight: 600; font-size: 15px;}
 
 
-.productBoxes{margin: 50px auto 0; width: 80%; height: auto; display: flex; justify-content: space-between; flex-wrap: wrap; z-index: 100;}
-.productBoxes .productBox{width: calc(33.33% - 16px); height: auto; border: 1px solid #111; margin-bottom: 20px; position: relative;}
+.productBoxes{margin: 50px 10%; width: 80%; height: auto !important ; display: flex; _justify-content: center; flex-wrap: wrap; z-index: 100; float: left; align-items: center;}
+.productBoxes .productBox{width: calc(33.33% - 20px); height: auto; _border: 1px solid #111; margin: 10px; position: relative; cursor: pointer;left:0 !important; top:0 !important}
 .productBoxes .productBox img{width: 100%;}
 .productBoxes .productBox .hoverBox{width: 100%; background: rgba(0,0,0); position: absolute; height: 100%; _display: flex; justify-content: center; align-items: center; display: none; animation:fadein2 0.8s 1; animation-fill-mode: forwards;}
-.productBoxes .productBox .hoverBox h3{font-family: 'lora'; font-weight: 400; font-size: 18px; color: #fcf9ef; z-index: 300; border: 1px solid #fcf9ef; width: 95%; height: 95%; display: flex; justify-content: center; align-items: center;}
+.productBoxes .productBox .hoverBox h3{font-family: 'lora'; font-weight: 400; font-size: 18px; color: #fcf9ef; z-index: 300; border: 1px solid #fcf9ef; width: 95%; height: 95%; display: flex; justify-content: center; align-items: center; text-align: center;padding: 20px;}
 .productBoxes .productBox:hover .hoverBox{display: flex;}

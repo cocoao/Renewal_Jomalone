@@ -24,6 +24,9 @@
   
   .label{width: 80%;}
   footer .footerBtn a{margin-left: 10px;}
+
+  .productFilter{width: 80%;}
+  .productBoxes .productBox{width: calc(50% - 20px);}
 }
 
 @media screen and (max-width : 750px){
@@ -36,6 +39,9 @@
   footer .footerBtn{display: none;}
   footer p{text-align: center; width: 100%; padding: 0;}
   .label{top: 45%;}
+
+  .productFilter{width: 90%;}
+  .productBoxes{width: 90%; margin: 50px 5%;}
 }
 
 @media screen and (max-width : 600px){
@@ -47,6 +53,13 @@
   .texBox .titBox{width: 60%;}
   .texBox .titBox h3{font-size: 28px;}
   .texBox{width: 90%; padding-right: 60px;}
+
+  .productSection{padding: 30px 0;}
+  .productFilter{width: 85%; height: 50px;}
+  .productFilter .button-group{flex-wrap: wrap;}
+  .productFilter .button-group button{font-size: 10px; width: 25%; padding: 10px; height: auto;}
+  .productFilter .button-group button:hover, .productFilter .button-group button.active{font-size: 12px;}
+  .productBoxes .productBox{width: 100%; margin-bottom: 10px;}
 }
 
 @media screen and (max-width : 480px){

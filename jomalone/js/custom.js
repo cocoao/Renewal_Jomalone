@@ -21,6 +21,8 @@ $(function(){
   });
 
   // navigation
+  function naviFixed(){
+    var winWidth = $(window).width();
   $(".miniGnb").click(function(){
     $(".gnbBox.hidden").css({"left":"0"});
     $(".miniGnb").css({"display":"none"});
@@ -43,8 +45,14 @@ $(function(){
       $(".nav").css({"width":"50px"})
       $(".miniGnb").css({"display":"flex"});
     });
-  
   }
+  };
+
+  $(window).resize(function(){
+    naviFixed();
+  });
+  naviFixed();
+
   // main slider
   $(".slideImg").bgSlideShow();
 
