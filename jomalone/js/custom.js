@@ -1,3 +1,9 @@
+$(document).ready(function(){
+                
+  $('.slideBox').EzFade({height: '450'});
+ 
+});
+
 $(function(){
 
   history.scrollRestoration = "manual"
@@ -25,13 +31,13 @@ $(function(){
     var winWidth = $(window).width();
   $(".miniGnb").click(function(){
     $(".gnbBox.hidden").css({"left":"0"});
-    $(".miniGnb").css({"display":"none"});
+    $(".miniGnb").css({"left":"-50px"});
     $(".nav").css({"width":"110px"})
   });
   $(".miniGnbDEl").click(function(){
     $(".gnbBox.hidden").css({"left":"-150px"});
     $(".nav").css({"width":"50px"})
-    $(".miniGnb").css({"display":"flex"});
+    $(".miniGnb").css({"left":"0"});
   });
 
   if(winWidth <= 480){
@@ -108,18 +114,19 @@ $(function(){
       $(".contentsBox").removeClass("hide");
     }
   });
+
   
   $(window).scroll(function(){
     var scroll = $(window).scrollTop();
     var sectionTop = $(".imgSection").offset().top;
     const allBoxTop = $(".allBox").offset().top;
 
-    if(sectionTop - 150 <= scroll && scroll < allBoxTop + 200){
+    if(sectionTop - 150 <= scroll && scroll < allBoxTop + 300){
       $(".contentsBox").show();
       $(".contentsBox").removeClass("hide");
     } else if(scroll = allBoxTop + 200){
       $(".contentsBox").addClass("hide");
-    } else if(sectionTop - 150 > scroll && scroll > allBoxTop + 200){
+    } else if(sectionTop - 150 > scroll && scroll > allBoxTop + 300){
       $(".contentsBox").hide();
       $(".contentsBox").removeClass("hide");
     }

@@ -32,7 +32,7 @@
 	width: 5pt;
 	margin-right: 5px;
 	_background: rgb(0, 0, 0);
-	border: 2px rgb(255, 255, 255);
+	_border: 2px rgb(255, 255, 255);
 	_box-shadow: 1px 1px 10px 1px white;
 	cursor: pointer;
 }

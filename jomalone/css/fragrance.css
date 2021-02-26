@@ -5,10 +5,11 @@
 -webkit-transition: transform 300ms ease-in-out;}
 .slide{position:relative; display:inline;float:left; width:100vw; max-width: 100%; height:250px; top:0; margin:0; padding:0; z-index:990; background-size:cover; background-position:center; background-repeat:no-repeat;}
 
-.slide .scentxtBox{width: 50%; height: auto; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 50; position: absolute; display: flex; _justify-content: center; align-items: center; flex-direction: row;}
-.slide h4{width:30%; font-size: 30px; _font-family: 'Lato'; _position: absolute; text-align: right; font-family: 'lora'; font-weight: 400;}
-.slide hr{width: 0; border:0; border-bottom: 1px solid #111; padding: 12px; margin: 0 10px;  animation: slideHr 1s 1; animation-fill-mode: forwards;z-index: 500;}
-.slide p{width:50%; font-size: 14px;}
+.slide .scentxtBox{width: 60%; height: auto; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 50; position: absolute; display: flex; justify-content: center; align-items: center; flex-direction: row;  _display: none;}
+.slide h4{font-size: 30px; _font-family: 'Lato'; _position: absolute; _text-align: right; font-family: 'lora'; font-weight: 400;}
+.slide hr{width: 0; border:0; border-bottom: 1px solid #111; padding: 12px; margin: 0 10px; z-index: 500; transition: all 0.4s; _animation-fill-mode: forwards !important;}
+.slide hr.on{animation: slideHr 1s 1; animation-fill-mode: forwards !important; width: 30%;}
+.slide p{font-size: 14px;}
 
 /* Next & previous buttons */
 .prev, .next { cursor: pointer; position: absolute; top: 50%; width: auto; margin-top: -30px; padding: 16px; color: #fff; font-weight: bold;font-size: 20px; border-radius: 0 3px 3px 0; user-select: none; opacity: 0.5; transition: all 0.4s;}
@@ -32,7 +33,7 @@
 .productFilter .button-group button:hover,.productFilter .button-group button.active{font-weight: 600; font-size: 15px;}
 
 
-.productBoxes{margin: 50px 10%; width: 80%; height: auto !important ; display: flex; _justify-content: center; flex-wrap: wrap; z-index: 100; float: left; align-items: center;}
+.productBoxes{margin: 50px 10% 100px; width: 80%; height: auto !important ; display: flex; _justify-content: center; flex-wrap: wrap; z-index: 100; float: left; align-items: center;}
 .productBoxes .productBox{width: calc(33.33% - 20px); height: auto; _border: 1px solid #111; margin: 10px; position: relative; cursor: pointer;left:0 !important; top:0 !important}
 .productBoxes .productBox img{width: 100%;}
 .productBoxes .productBox .hoverBox{width: 100%; background: rgba(0,0,0); position: absolute; height: 100%; _display: flex; justify-content: center; align-items: center; display: none; animation:fadein2 0.8s 1; animation-fill-mode: forwards;}

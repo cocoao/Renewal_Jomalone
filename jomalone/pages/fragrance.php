@@ -40,7 +40,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/jomalone/include/header.php"
           <li class="slide" data-img="/jomalone/img/scents_citrus.jpeg">
             <div class="scentxtBox">
               <h4>Citrus</h4>
-              <hr>
+              <hr class="on">
               <p>밝고 에너지 넘치는 생기 발랄한 향</p>
             </div>
           </li>
@@ -62,7 +62,7 @@ include $_SERVER["DOCUMENT_ROOT"]."/jomalone/include/header.php"
           <div class="scentxtBox">
               <h4>Floral</h4>
               <hr>
-              <p>꽃이 풍성하게 만개한 듯 강렬하고 이국적인 향</p>
+              <p>꽃이 풍성하게 만개한 듯<br>강렬하고 이국적인 향</p>
             </div>
           </li>
           <li class="slide" data-img="/jomalone/img/scents_spicy.jpeg">

@@ -48,16 +48,32 @@ let position = -100,
     slidew = 100,
     duration = 0.3,
     delay = duration * 1000 + 1,
-    endPosition = (imgCount - 2) * -100 
+    endPosition = (imgCount - 2) * -100,
+    txtHr = $('.slide');
 
 function nextSlide(){
   position = position - slidew;
   imgGroup.css({'transform':'translateX(' + position + 'vw)', 'transition-duration' : +duration + 's'});
+
+  index = position * -0.01;
+  if(index == 7){index = 1};
+  txtHrtran = txtHr.eq(index).find('hr');
+  txtHr.find('hr').removeClass('on');
+  txtHrtran.addClass('on');
+  // console.log(position);
+
 }
 
 function prevSlide(){
 	position = position + slidew;
-	imgGroup.css({'transform': 'translateX(' + position + 'vw)', 'transition-duration': +duration + 's'});
+  imgGroup.css({'transform': 'translateX(' + position + 'vw)', 'transition-duration': +duration + 's'});
+
+  index = position * -0.01;
+  if(index == 0){index = 6};
+  txtHrtran = txtHr.eq(index).find('hr');
+  txtHr.find('hr').removeClass('on');
+  txtHrtran.addClass('on');
+  // console.log(position);
 }
 function rotateSlide(){
 	setTimeout(function() {
@@ -146,6 +162,7 @@ $(".prev").click(function(){
   }
 });
 
+
 $(function(){
 
   let winWidth = $(window).width();
@@ -163,13 +180,13 @@ $(function(){
   // navigation
   $(".miniGnb").click(function(){
     $(".gnbBox.hidden").css({"left":"0"});
-    $(".miniGnb").css({"display":"none"});
+    $(".miniGnb").css({"left":"-50px"});
     $(".nav").css({"width":"110px"})
   });
   $(".miniGnbDEl").click(function(){
     $(".gnbBox.hidden").css({"left":"-150px"});
     $(".nav").css({"width":"50px"})
-    $(".miniGnb").css({"display":"flex"});
+    $(".miniGnb").css({"left":"0"});
   });
 
   if(winWidth <= 480){
