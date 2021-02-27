@@ -1,9 +1,3 @@
-$(document).ready(function(){
-                
-  $('.slideBox').EzFade({height: '450'});
- 
-});
-
 $(function(){
 
   history.scrollRestoration = "manual"
@@ -14,6 +8,40 @@ $(function(){
   var otherBoxTop = $(".otherBox").offset().top;
   var winWidth = $(window).width();
 
+  function slidecss(){
+    var winWidth = $(window).width();
+    var navWidth =  $(".nav").width();
+    var slideWid = winWidth - navWidth;
+    var slideHei = winWidth * 0.35;
+    $('#jssor_1').css({width:slideWid,height:slideHei});
+    $('.slides').css({width:slideWid,height:slideHei});
+    $('.slides img').css({width:slideWid,height:'auto'}); 
+  }
+
+  function slidecssmin(){
+    var winWidth = $(window).width();
+    var navWidth =  $(".nav").width();
+    var slideWid = winWidth - navWidth;
+    var slideHei = '300px';
+    $('#jssor_1').css({width:slideWid,height:slideHei});
+    $('.slides').css({width:slideWid,height:slideHei});
+    $('.slides img').css({width:'auto',height:'350px','object-position':'center center'}); 
+  }
+
+  $(window).resize(function(){
+    var winWidth = $(window).width();
+    if(winWidth <= 800){
+      slidecssmin()
+    } else {
+    slidecss()
+    }
+  });
+  var winWidth = $(window).width();
+  if(winWidth <= 800){
+    slidecssmin()
+  } else {
+  slidecss()
+  }
 
   // header fix
   $(window).scroll(function(){
@@ -59,8 +87,10 @@ $(function(){
   });
   naviFixed();
 
+
   // main slider
-  $(".slideImg").bgSlideShow();
+  // $(".slideImg").bgSlideShow();
+
 
   // btns click scroll down
   $(".allow").click(function(){
@@ -160,82 +190,51 @@ $(function(){
     }
   });
 
-  // function scrollFixed(){
-  //   $(window).scroll(function(){
-  //     let gnbW = $(".miniGnb").outerWidth();
-  //     let contentBoxW = $(".contentsBox").outerWidth();
-  //     let windowW = $(window).width();
-  //     var scroll = $(window).scrollTop();
-      
-
-  //     if(windowW < 800 && allBoxTop <= scroll){
-  //       $('.contentsBox').removeClass('fixed');
-  //     } else {
-  //       if(scroll > mainNewTop + winWidth * 0.01 && scroll < allBoxTop + winWidth * 0.02){
-  //         $('.contentsBox').addClass('fixed');
-  //       }else{
-  //         $('.contentsBox').removeClass('fixed');
-  //       }
-  //     }
-  // });
-  // }
-  // scrollFixed()
-
-  // $(window).resize(function(){
-  //   scrollFixed();
-  // });
-  // scrollFixed();
-
-  // if(scroll > mainNewTop + winWidth * 0.01 && scroll < otherBoxTop - winWidth * 1.05){
-  // if (width_size <= 800) {
-  //   alert('현재 브라우저 크기가 <= 800px');
-
-  // $(window).resize(function(){
-  //   const winWidth = $(window).width();
-  //   if(winWidth >= 1200){
-  //     $(window).scroll(function(){
-  //       var scroll = $(window).scrollTop();
-  //       if(scroll > mainNewTop + winWidth * 0.01 && scroll < otherBoxTop - winWidth * 0.8){
-  //         $('.contentsBox').addClass('fixed');
-  //       }else{
-  //         $('.contentsBox').removeClass('fixed');
-  //       }
-  //   });
-  //   }
-  //   if(winWidth < 1200){
-  //     $(window).scroll(function(){
-  //       var scroll = $(window).scrollTop();
-  //       if(scroll > mainNewTop + winWidth * 0.01 && scroll < otherBoxTop - winWidth * 2){
-  //         $('.contentsBox').addClass('fixed');
-  //       }else{
-  //         $('.contentsBox').removeClass('fixed');
-  //       }
-  //   });
-  //   }
-  // });
-
-
-  // $(window).scroll(function(){
-  //   var scroll = $(window).scrollTop();
-
-  //   if(scroll > mainNewTop + 80){
-  //     $('.newCon').show();
-  //     $('.bestCon').hide();
-  //     $('.allCon  ').hide();
-  //   }
-  //   if(scroll > bestBoxTop - 550){
-  //     $('.newCon').hide();
-  //     $('.bestCon').show();
-  //     $('.allCon').hide();
-  //   }
-  //   if(scroll > allBoxTop - 500){
-  //     $('.newCon').hide();
-  //     $('.bestCon').hide();
-  //     $('.allCon').show();
-  //   }
-  //   if(scroll > allBoxTop + 200){
-  //   $('.allCon').css({"display":"inline"});
-  //   }
-  // });
-
 });
+
+window.jssor_1_slider_init = function(){
+  var jssor_1_SlideshowTransitions = [
+    {$Duration:800,$Opacity:2}
+  ];
+  var jssor_1_options = {
+    $AutoPlay: 1,
+    $SlideshowOptions: {
+      $Class: $JssorSlideshowRunner$,
+      $Transitions: jssor_1_SlideshowTransitions,
+      $TransitionsOrder: 1
+    },
+    $ArrowNavigatorOptions: {
+      $Class: $JssorArrowNavigator$
+    },
+    $BulletNavigatorOptions: {
+      $Class: $JssorBulletNavigator$,
+      $SpacingX: 16,
+      $SpacingY: 16
+    }
+  };
+  var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+  var MAX_WIDTH = 100 + '%';
+  function ScaleSlider() {
+    var containerElement = jssor_1_slider.$Elmt.parentNode;
+    var containerWidth = containerElement.clientWidth;
+    // console.log(MAX_WIDTH);
+    if (containerWidth) {
+
+        var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+        jssor_1_slider.$ScaleWidth(expectedWidth);
+    }
+    else {
+        window.setTimeout(ScaleSlider, 30);
+    }
+}
+
+ScaleSlider();
+
+
+$Jssor$.$AddEvent(window, "load", ScaleSlider);
+$Jssor$.$AddEvent(window, "resize", ScaleSlider);
+$Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+
+};

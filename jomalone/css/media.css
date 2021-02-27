@@ -1,5 +1,5 @@
 @media screen and (max-width : 1200px){
-  .slideBox, .slideImg{height: 450px;}
+  /* .slideBox, .slideImg{height: 450px;} */
   .logoBox{height: 90px;}
   .texBox{width: 95%; _height: 40vh; padding-right: 50px;}
   .texBox .titBox h3{font-size: 34px;}
@@ -8,7 +8,7 @@
 }
 
 @media screen and (max-width : 900px){
-  .slideBox, .slideImg{height: 400px;}
+  /* .slideBox, .slideImg{height: 400px;} */
   .linkBox a:nth-child(2){margin: 0 20px;}
   .allow{margin-bottom: 30px;}
   .allow i{font-size: 40px;}
@@ -33,7 +33,7 @@
 }
 
 @media screen and (max-width : 750px){
-  .slideBox, .slideImg{height: 350px;}
+  /* .slideBox, .slideImg{height: 350px;} */
   .texBox{width:80%;}
   .texBox .titBox h3{font-size: 28px;}
   .texBox .txtBtn{margin-top: 10%;}
@@ -49,7 +49,7 @@
 }
 
 @media screen and (max-width : 600px){
-  .slideBox, .slideImg{height: 300px;}
+  /* .slideBox, .slideImg{height: 300px;} */
   .linkBox a{width: 28%;}
   .linkBox a:nth-child(2){margin: 0 10px;}
   .texBox{height: 30vh;}
@@ -87,7 +87,7 @@
   header .gnbBox .gnb{height: calc(100% - 125px); position: relative;}
 
   .center{width: 100%; margin-left: 0;}
-  .slideBox, .slideImg{height: 200px;}
+  /* .slideBox, .slideImg{height: 200px;} */
   .linkBox a{width: 25%;}
 
   .contentsBox{margin: 0; padding: 0;}

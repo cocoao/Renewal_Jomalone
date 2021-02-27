@@ -16,13 +16,13 @@
   <link rel="stylesheet" href="/jomalone/css/reset.css">
   <link rel="stylesheet" href="/jomalone/css/style.css">
   <link rel="stylesheet" href="/jomalone/css/animation.css">
-  <link rel="stylesheet" href="/jomalone/plugin/jquery-bg-slideshow.css">
+  <!-- <link rel="stylesheet" href="/jomalone/plugin/"> -->
   <link rel="stylesheet" href="/jomalone/css/media.css">
 
 
   <!-- jqeury link -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="/jomalone/plugin/jquery-bg-slideshow-min.js"></script>
+  <script src="/jomalone/plugin/jssor.slider-28.1.0.min.js"></script>
   <script src="/jomalone/js/custom.js"></script>
 
 </head>
@@ -36,8 +36,28 @@ include $_SERVER["DOCUMENT_ROOT"]."/jomalone/include/header.php"
   <div class="center">
     <section class="mainSlide clear">
       <div class="slideBox">
-        <div class='slideImg' data-current="0" data-images="/jomalone/img/main_slider_01.jpg,/jomalone/img/main_slider_02.jpg,/jomalone/img/main_slider_03.jpg" data-transitionDelay="2000" data-transitionSpeed="2000" data-transitionEffect="fade-in" data-randomize="true"   data-initialBackground="2" data-debug="false">
+      <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1400px;height:500px;overflow:hidden;visibility:hidden;">
+        <!-- Loading Screen -->
+        <div class="slides" data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1400px;height:500px;overflow:hidden;">
+            <div>
+               <img src="/jomalone/img/main_slider_01.jpg" data-u="image">
+            </div>
+            <div>
+              <img src="/jomalone/img/main_slider_02.jpg" data-u="image">
+            </div>
+            <div>
+              <img src="/jomalone/img/main_slider_03.jpg" data-u="image">
+            </div>
         </div>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb051" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+            <div data-u="prototype" class="i" style="width:12px;height:12px;">
+                <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                    <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+                </svg>
+            </div>
+        </div>
+    </div>
       </div>
       <div class="linkBox">
         <a href="#" class="newPro">NEW PRODUCTS</a>
@@ -125,5 +145,6 @@ include $_SERVER["DOCUMENT_ROOT"]."/jomalone/include/header.php"
   ?>
 
 </div>
+<script type="text/javascript">jssor_1_slider_init();</script>
 </body>
 </html>

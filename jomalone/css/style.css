@@ -30,10 +30,14 @@ header .gnbBox.hidden{position: fixed; left: -110px; height: 100vh; transition: 
 
 /* main slide style */
 .mainSlide{width: 100%; height: auto; display: flex; justify-content: center; flex-direction: column; align-items: center;}
-.slideBox{width: 100%; height: 500px;}
-.slideImg{width: 100%; height: 500px; background-repeat: no-repeat; background-size: cover; background-position: center;}
+.slideBox{_width: 100%; _height: 500px; margin-bottom: 50px;}
+.slideImg{_width: 100%; _height: 500px; background-repeat: no-repeat; background-size: cover; background-position: center;}
+.slides img{object-fit:cover; width: 100%; object-position: center top !important;}
+#slideBox>div:nth-child(2){left: 50%; transform: translateX(-50%);}
+/* #jssor_1{position:relative;margin:0 auto;top:0px;width:100%;height:380px;overflow:hidden;visibility:hidden;} */
+/* #jssor_1{width:100%;height:500px;} */
 
-.linkBox{width: 100%; padding: 50px 0 30px; display: flex; justify-content: center; z-index: 800;}
+.linkBox{width: 100%; padding: 0 0 30px; display: flex; justify-content: center; z-index: 800;}
 .linkBox a{width: 25%; font-family: 'lora'; text-align: center; padding: 10px 0; border:1px solid #111; align-items: center; justify-content: center; display: flex; font-size: 12px; text-transform: uppercase; cursor: pointer;}
 .linkBox a:nth-child(2){margin: 0 30px;}
 .linkBox a:hover{background: #111; color: #fff;}
@@ -98,3 +102,10 @@ footer .snsBox i:hover{font-size: 24px;} */
 footer .footerBtn{text-align: right; width: 60%; padding-right: 40px;}
 footer .footerBtn a{color: #fff; font-size: 12px; margin-left: 25px;}
 footer .footerBtn a:hover{text-decoration: underline;}
+
+
+.jssorb051 .i {position:absolute;cursor:pointer;}
+.jssorb051 .i .b {fill:#fff;fill-opacity:0.3;}
+.jssorb051 .i:hover .b {fill-opacity:.7;}
+.jssorb051 .iav .b {fill-opacity: 1;}
+.jssorb051 .i.idn {opacity:.3;}
