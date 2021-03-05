@@ -11,7 +11,6 @@
 /* navigation style */
 header{height: 100vh; position: fixed; top: 0; z-index: 999;}
 header .nav{width: 50px; height:100vh; background: #fcf9ef; box-shadow: 2px 3px 1px rgb(0 0 0 / 30%);transition: all 0.4s;}
-/* header .header.on{width: 110px; background: #fff;} */
 header .miniGnb{width: 50px; height: 100%;_background: #fff; position: fixed; _border-right: 1px solid #ddd; z-index: 150; display: flex; justify-content: center; flex-direction: column; align-items: center; left: 0; transition: all 0.4s;}
 header .miniGnb i{font-weight: 700; font-size: 25px; text-align: center; padding: 20px 0;}
 header .miniGnb i.fa-bars{top: 0; position: absolute;}
@@ -21,12 +20,24 @@ header .miniGnb .miniMenu i:nth-child(1){padding-bottom: 0;}
 header .gnbBox{width: 110px; height: 100%; _background: #fff; position: fixed; _border-right: 1px solid #ddd; z-index: 200;}
 header .gnbBox .miniGnbDEl{width: 100%;display: flex; justify-content: center;}
 header .gnbBox i{font-weight: 700; font-size: 25px; text-align: center; padding: 20px 0;}
-header .gnbBox .gnb{width:100%; height:calc(100% - 70px); margin: auto; display: flex; justify-content: space-between; align-items: center; flex-direction: column; position: absolute; bottom: 0;}
-header .gnbBox .gnb li{width:100%; height:100%; text-align: center; text-transform: uppercase; display: flex; justify-content: center; align-items: center; }
-header .gnbBox .gnb li a{font-family: 'lora'; font-weight: 500;}
-header .gnbBox .gnb li:hover,.gnbBox .gnb li.active{background: #111;}
-header .gnbBox .gnb li:hover a,.gnbBox .gnb li.active a{color: #fff;}
+header .gnbBox .deapt-1{width:100%; height:calc(100% - 70px); margin: auto; display: flex; justify-content: space-between; align-items: center; flex-direction: column; position: absolute; bottom: 0;}
+header .gnbBox .deapt-1>li{width:100%; height:100%; text-align: center; text-transform: uppercase; display: flex; justify-content: center; align-items: center;}
+header .gnbBox .deapt-1>li>a{font-family: 'lora'; font-weight: 500; width: 100%; height: 100%;display: flex; justify-content: center; align-items: center;}
+header .gnbBox .deapt-1>li:hover,.gnbBox .deapt-1>li.active{background: #111;}
+header .gnbBox .deapt-1>li:hover a,.gnbBox .deapt-1>li.active>a{color: #fff;}
 header .gnbBox.hidden{position: fixed; left: -110px; height: 100vh; transition: all 0.4s;}
+
+/* nav 2depth style */
+header .nav-2depth{width:110px; height:100vh; background: #fcf9ef; box-shadow: 2px 3px 1px rgb(0 0 0 / 30%);transition: all 0.4s; position: fixed; left: -110px; top:0; z-index: -1; _display: none;}
+header .gnbBox-2d{width: 110px; height: 100%; position: fixed; z-index: 200;}
+header .gnbBox-2d .deapt-2{width: 100%; height: 100%; position: relative;}
+header .gnbBox-2d .deapt-2>li{display: none; position: absolute; width: 100%; height: 100%;}
+header .gnbBox-2d .deapt-2>li>ul{width:100%; height:100%; margin: auto; display: flex; _justify-content: center; align-items: center; flex-direction: column; position: absolute; bottom: 0;}
+header .gnbBox-2d .deapt-2>li>ul>li{width:100%; height:13%; text-align: center; text-transform: uppercase; display: flex; justify-content: center; align-items: center;}
+header .gnbBox-2d .deapt-2>li>ul>li>a{font-family: 'lora'; font-weight: 500; width: 100%; height: 100%;display: flex; justify-content: center; align-items: center; font-size: 12px;}
+header .gnbBox-2d .deapt-2>li>ul>li:hover,.gnbBox .deapt-1>li>ul>li.active{background: #111;}
+header .gnbBox-2d .deapt-2>li>ul>li:hover a,.gnbBox .deapt-1>li>ul>li.active>a{color: #fff;}
+
 
 /* main slide style */
 .mainSlide{width: 100%; height: auto; display: flex; justify-content: center; flex-direction: column; align-items: center;}
@@ -34,8 +45,6 @@ header .gnbBox.hidden{position: fixed; left: -110px; height: 100vh; transition: 
 .slideImg{_width: 100%; _height: 500px; background-repeat: no-repeat; background-size: cover; background-position: center;}
 .slides img{object-fit:cover; width: 100%; object-position: center top !important;}
 #slideBox>div:nth-child(2){left: 50%; transform: translateX(-50%);}
-/* #jssor_1{position:relative;margin:0 auto;top:0px;width:100%;height:380px;overflow:hidden;visibility:hidden;} */
-/* #jssor_1{width:100%;height:500px;} */
 
 .linkBox{width: 100%; padding: 0 0 30px; display: flex; justify-content: center; z-index: 800;}
 .linkBox a{width: 25%; font-family: 'lora'; text-align: center; padding: 10px 0; border:1px solid #111; align-items: center; justify-content: center; display: flex; font-size: 12px; text-transform: uppercase; cursor: pointer;}
@@ -48,8 +57,14 @@ header .gnbBox.hidden{position: fixed; left: -110px; height: 100vh; transition: 
 .allow i:nth-child(2){animation: icon linear 0.9s 0.3s infinite;}
 .allow i:nth-child(3){animation: icon linear 0.9s 0.6s infinite;}
 
+/* slider style */
+.jssorb051 .i {position:absolute;cursor:pointer;}
+.jssorb051 .i .b {fill:#fff;fill-opacity:0.3;}
+.jssorb051 .i:hover .b {fill-opacity:.7;}
+.jssorb051 .iav .b {fill-opacity: 1;}
+.jssorb051 .i.idn {opacity:.3;}
 
-/* main_new section style */
+/* main_image section style */
 .imgSection{width: 100%; height: 100%; position: relative;}
 .relBox{position: relative; width: 100vw; height: 100vh; }
 .mainBox{width: 100%; height: auto; position: relative;}
@@ -57,7 +72,6 @@ header .gnbBox.hidden{position: fixed; left: -110px; height: 100vh; transition: 
 .contentsBox.hide{animation: slideUpRe 0.2s 1; display: none; animation-fill-mode: forwards;}
 
 .bottleImg{width: 100%; height: auto; margin: auto; display: flex; justify-content:center; _align-items: center; z-index: 10; top:50%; left: 50%; transform: translate(-50%, -60%); position: absolute;padding: 3%;}
-/* .bottleImg .img{width:100%; height:500px; background: url('/jomalone/img/main_bottle.png') no-repeat center center; background-size: contain;} */
 .bottleImg img{width: 100%;}
 .label{width: 100%; height: auto; top: 50%; position: absolute; left: 50%; transform: translate(-50%,-55%); z-index: 100; padding: 15%;}
 .label img{width: 100%;}
@@ -69,7 +83,7 @@ header .gnbBox.hidden{position: fixed; left: -110px; height: 100vh; transition: 
 .texBox .txtBtn{width: 40%; position: relative; display: flex; padding: 0 10% 0 5%; flex-direction: column; justify-content: flex-end;}
 .txtBtn p{display: block; margin-bottom: 25px;}
 .txtBtn a{padding: 5px 30px; background: #111; color: #fff; border: 1px solid #111; text-align: center; cursor: pointer;}
-/* .texBox span{width: 33.33%;} */
+
 .bestCon, .allCon{display: none;}
 .texBox span.bottle{display: flex; justify-content: center; align-items: center; width: 20%; position: relative;}
 
@@ -78,12 +92,14 @@ header .gnbBox.hidden{position: fixed; left: -110px; height: 100vh; transition: 
 .mainBox .mainBestBg{background-image: url('/jomalone/img/main_bg_best.jpg');}
 .mainBox .mainAllBg{background-image: url('/jomalone/img/main_bg_all.jpg');}
 
+/* main_boutique section style */
 .boutique{ z-index: 200 !important; width: 100%; height: auto; padding: 30px 0; display: flex; justify-content: center; align-items: center; position: relative;}
 .boutique a{text-align: center;  font-family: 'lora'; font-weight: 700; font-size: 20px;}
 .boutique a p{text-align: center;  font-family: 'Noto Sans KR'; font-weight: 500; font-size: 14px; line-height: 2;}
 .boutique:hover{background: #111; z-index: 800}
 .boutique:hover a{color: #fff;}
 
+/* main_others section style */
 .otherBox{width: 100%; height: auto; display: flex; justify-content: space-between; align-items: center; flex-direction: row; z-index: 300;}
 .otherBox>div{width: 25%; height: auto; display: flex; justify-content: center; align-items: center; position: relative;}
 .otherBox>div img{width: 100%;}
@@ -91,21 +107,10 @@ header .gnbBox.hidden{position: fixed; left: -110px; height: 100vh; transition: 
 .otherBox .hover a{font-size: 14px; padding: 5px 15px; border: 1px solid #fff; color: #fff; font-family: 'Lato'; font-weight: 500;}
 .otherBox>div:hover .hover{display: flex;}
 
+/* footer style */
 footer{width: calc(100% - 50px); height: 60px; background: #111; display: flex; justify-content: space-between; align-items: center; margin-left: 50px; position: relative;}
 footer p{width:40%; font-size: 14px; font-family: 'Lato'; font-weight: 600; color: #fff; padding-left: 30px;}
-/* footer>div{width: 35%; padding: 0 30px; z-index: 50;} */
-/* footer .snsBox{display: flex; width: 20%; height: 100%; align-items: center;}
-footer .snsBox a{display: flex; justify-content: center; align-items: center;}
-footer .snsBox i{font-size: 18px; color: #fff; transition: all 0.4s; margin-right: 25px; width: 30px;}
-footer .snsBox i:hover{font-size: 24px;} */
-
 footer .footerBtn{text-align: right; width: 60%; padding-right: 40px;}
 footer .footerBtn a{color: #fff; font-size: 12px; margin-left: 25px;}
 footer .footerBtn a:hover{text-decoration: underline;}
 
-
-.jssorb051 .i {position:absolute;cursor:pointer;}
-.jssorb051 .i .b {fill:#fff;fill-opacity:0.3;}
-.jssorb051 .i:hover .b {fill-opacity:.7;}
-.jssorb051 .iav .b {fill-opacity: 1;}
-.jssorb051 .i.idn {opacity:.3;}

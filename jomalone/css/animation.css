@@ -21,6 +21,7 @@
   0%{opacity: 0;}
   100%{opacity: 40%;}
 }
+
 @keyframes fadein2{
   0%{opacity: 0;}
   100%{opacity: 60%;}

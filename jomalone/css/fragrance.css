@@ -16,24 +16,17 @@
 .next {right: 0; border-radius: 3px 0 0 3px;}
 .prev:hover, .next:hover{opacity: 0.8; font-size: 23px;}
 
-/* The dot/bullet/indicator container */
-/* .dot-container {text-align: center;padding: 15px; position: absolute; bottom: 10px; z-index: 500; left: 50%; transform: translateX(-50%); z-index: 1;}
-.dot {cursor: pointer; height: 10px; width: 10px; margin: 0 5px; background-color: #fff; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease;}
-.active, .dot:hover {background-color: #111;} */
-
 /* productBoxes style */
 .productSection{width: 100%; height: auto; padding: 50px 0}
 .productFilter{width: 70%; margin: auto; height: 60px;}
 .productFilter .button-group{justify-content: space-between; display: flex; width: 100%; align-items: center; height: 100%;}
 .productFilter .button-group button{background: none; border: 0; outline: 0; _padding: 5px 0; cursor: pointer; width: 100%; height: 100%; position: relative; transition: all 0.4s; font-family: 'lora'; z-index: 10;}
-/* .productFilter .button-group button:hover,.productFilter .button-group button.active{border-bottom: 2px solid #111;} */
 .filterBg{width: 60%; height: auto; opacity: 0.4; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: -10; display:none; animation:fadein 0.5s 1; z-index: -10;}
 .filterBg img{width: 100%;}
 .productFilter .button-group button:hover .filterBg{display: block;}
 .productFilter .button-group button:hover,.productFilter .button-group button.active{font-weight: 600; font-size: 15px;}
 
-
-.productBoxes{margin: 50px 10% 100px; width: 80%; height: auto !important ; display: flex; _justify-content: center; flex-wrap: wrap; z-index: 100; float: left; align-items: center;}
+.productBoxes{margin: 50px 10% 140px; width: 80%; height: auto !important ; display: flex; flex-wrap: wrap; z-index: 100; float: left; align-items: center;}
 .productBoxes .productBox{width: calc(33.33% - 20px); height: auto; _border: 1px solid #111; margin: 10px; position: relative; cursor: pointer;left:0 !important; top:0 !important}
 .productBoxes .productBox img{width: 100%;}
 .productBoxes .productBox .hoverBox{width: 100%; background: rgba(0,0,0); position: absolute; height: 100%; _display: flex; justify-content: center; align-items: center; display: none; animation:fadein2 0.8s 1; animation-fill-mode: forwards;}

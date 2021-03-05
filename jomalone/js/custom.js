@@ -1,47 +1,7 @@
 $(function(){
 
+  // scroll top when reload
   history.scrollRestoration = "manual"
-
-  var mainNewTop = $(".newBox").offset().top;
-  var bestBoxTop = $(".bestBox").offset().top;
-  var allBoxTop = $(".allBox").offset().top;
-  var otherBoxTop = $(".otherBox").offset().top;
-  var winWidth = $(window).width();
-
-  function slidecss(){
-    var winWidth = $(window).width();
-    var navWidth =  $(".nav").width();
-    var slideWid = winWidth - navWidth;
-    var slideHei = winWidth * 0.35;
-    $('#jssor_1').css({width:slideWid,height:slideHei});
-    $('.slides').css({width:slideWid,height:slideHei});
-    $('.slides img').css({width:slideWid,height:'auto'}); 
-  }
-
-  function slidecssmin(){
-    var winWidth = $(window).width();
-    var navWidth =  $(".nav").width();
-    var slideWid = winWidth - navWidth;
-    var slideHei = '300px';
-    $('#jssor_1').css({width:slideWid,height:slideHei});
-    $('.slides').css({width:slideWid,height:slideHei});
-    $('.slides img').css({width:'auto',height:'350px','object-position':'center center'}); 
-  }
-
-  $(window).resize(function(){
-    var winWidth = $(window).width();
-    if(winWidth <= 800){
-      slidecssmin()
-    } else {
-    slidecss()
-    }
-  });
-  var winWidth = $(window).width();
-  if(winWidth <= 800){
-    slidecssmin()
-  } else {
-  slidecss()
-  }
 
   // header fix
   $(window).scroll(function(){
@@ -66,6 +26,7 @@ $(function(){
     $(".gnbBox.hidden").css({"left":"-150px"});
     $(".nav").css({"width":"50px"})
     $(".miniGnb").css({"left":"0"});
+    $('header .nav-2depth').css({"left":"-110px"});
   });
 
   if(winWidth <= 480){
@@ -79,18 +40,70 @@ $(function(){
       $(".nav").css({"width":"50px"})
       $(".miniGnb").css({"display":"flex"});
     });
-  }
+    }
+  };
+  
+  // navigation 2depth
+  function navi2depFixed(){
+    var winWidth2 = $(window).width();
+    console.log(winWidth);
+  $("header .gnbBox .deapt-1>li").mouseover(function(){
+    $('header .nav-2depth').css({"left":"110px"});
+    var idName = $(this).attr('id');
+    var de1Index = $(this).index();
+    const indexTop = $('.deapt-1>li').eq(de1Index).offset().top;
+    const indexTopPrev = $('.deapt-1>li').eq(de1Index - 1).offset().top;
+    const indexBottom = $('.deapt-1>li').eq(de1Index).offset().bottom;
+    const index4Top = $('.deapt-1>li').eq(3).offset().top;
+
+    var viewClass = $(".deapt-2 ." + idName);
+    if(de1Index <= 1){
+      $(".deapt-2>li").css({'display':'none','top':indexTop + 'px'});
+    }
+    else if(de1Index <= 3 && de1Index > 1){
+     $(".deapt-2>li").css({'display':'none','top':indexTopPrev + 'px'});
+    }
+    else if(de1Index <= 6 && de1Index > 3){
+      $(".deapt-2>li").css({'display':'none','top':index4Top + 'px'});
+    }
+    $(viewClass).css({'display':'block'});
+  });
+
+  $(".header").mouseleave(function(){
+    $('header .nav-2depth').css({"left":"-110px"});
+  });
+  
+  $(".miniGnbDEl").mouseover(function(){
+    $('header .nav-2depth').css({"left":"-110px"});
+  });
+
+  if(winWidth2 <= 480){
+    $("header .gnbBox .deapt-1>li").click(function(){
+      var gnbIndex = $(this).index();
+      $('.deapt-1').css({'left':'-100%'});
+      $('.nav-2depth').css({'left':'0','display':'block'});
+      $('.deapt-2>li').css({'top':'0'});
+    });
+    $(".miniGnbDEl").click(function(){
+      $('.nav-2depth').css({'display':'none'});
+      $('.deapt-1').css({'left':'0'});
+    });
+  };
   };
 
   $(window).resize(function(){
     naviFixed();
+    navi2depFixed();
   });
   naviFixed();
+  navi2depFixed();
 
 
-  // main slider
-  // $(".slideImg").bgSlideShow();
-
+  var mainNewTop = $(".newBox").offset().top;
+  var bestBoxTop = $(".bestBox").offset().top;
+  var allBoxTop = $(".allBox").offset().top;
+  var otherBoxTop = $(".otherBox").offset().top;
+  var winWidth = $(window).width();
 
   // btns click scroll down
   $(".allow").click(function(){
@@ -108,7 +121,6 @@ $(function(){
   $(".allPro").click(function(){
     $("html,body").animate({scrollTop:allBoxTop});
   });
-
 
   // contents box height
   $(window).resize(function(){
@@ -144,7 +156,6 @@ $(function(){
       $(".contentsBox").removeClass("hide");
     }
   });
-
   
   $(window).scroll(function(){
     var scroll = $(window).scrollTop();
@@ -173,7 +184,6 @@ $(function(){
       tilte.text("Wild Bluebell Decorated collection");
       labelImg.attr("src", "/jomalone/img/main_label_bluebell.jpg");
       textCon.text("숲 속 깊은 곳에서 빛나고 있는 사파이어. 이슬 맺힌 블루벨의 은은하고 달콤한 향기에 산골짜기 백합, 들장미, 달콤한 감향이 더해졌습니다. 최면을 걸 듯 마음을 사로잡는 향수입니다.");
-      // textBtn.attr("href","/jomalone/pages/fragrance.php");
       }
     else if(scroll > bestBoxTop -500 && scroll < allBoxTop -500){
       titleSec.text("BEST PRODUCTS");
@@ -192,49 +202,4 @@ $(function(){
 
 });
 
-window.jssor_1_slider_init = function(){
-  var jssor_1_SlideshowTransitions = [
-    {$Duration:800,$Opacity:2}
-  ];
-  var jssor_1_options = {
-    $AutoPlay: 1,
-    $SlideshowOptions: {
-      $Class: $JssorSlideshowRunner$,
-      $Transitions: jssor_1_SlideshowTransitions,
-      $TransitionsOrder: 1
-    },
-    $ArrowNavigatorOptions: {
-      $Class: $JssorArrowNavigator$
-    },
-    $BulletNavigatorOptions: {
-      $Class: $JssorBulletNavigator$,
-      $SpacingX: 16,
-      $SpacingY: 16
-    }
-  };
-  var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
 
-  var MAX_WIDTH = 100 + '%';
-  function ScaleSlider() {
-    var containerElement = jssor_1_slider.$Elmt.parentNode;
-    var containerWidth = containerElement.clientWidth;
-    // console.log(MAX_WIDTH);
-    if (containerWidth) {
-
-        var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
-
-        jssor_1_slider.$ScaleWidth(expectedWidth);
-    }
-    else {
-        window.setTimeout(ScaleSlider, 30);
-    }
-}
-
-ScaleSlider();
-
-
-$Jssor$.$AddEvent(window, "load", ScaleSlider);
-$Jssor$.$AddEvent(window, "resize", ScaleSlider);
-$Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
-
-};
