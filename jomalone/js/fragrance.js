@@ -54,15 +54,7 @@ $(function(){
     const index4Top = $('.deapt-1>li').eq(3).offset().top;
 
     var viewClass = $(".deapt-2 ." + idName);
-    if(de1Index <= 1){
-      $(".deapt-2>li").css({'display':'none','top':indexTop + 'px'});
-    }
-    else if(de1Index <= 3 && de1Index > 1){
-     $(".deapt-2>li").css({'display':'none','top':indexTopPrev + 'px'});
-    }
-    else if(de1Index <= 6 && de1Index > 3){
-      $(".deapt-2>li").css({'display':'none','top':index4Top + 'px'});
-    }
+    $(".deapt-2>li").css({'display':'none'});
     $(viewClass).css({'display':'block'});
   });
 
