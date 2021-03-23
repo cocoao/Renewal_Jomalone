@@ -3,17 +3,18 @@ $(function(){
   function slidecss(){
     var winWidth = $(window).width();
     var navWidth = $(".nav").width();
-    var slideWid = winWidth - navWidth;
+    var slideWid = winWidth - '50px';
     var slideHei = winWidth * 0.35;
     $('#jssor_1').css({width:slideWid,height:slideHei});
     $('.slides').css({width:slideWid,height:slideHei});
-    $('.slides img').css({width:slideWid,height:'auto'}); 
+    $('.slides>div').css({width:slideWid,height:slideHei});
+    $('.slides img').css({width:'100%',height:'auto'}); 
   }
   
   function slidecssmin(){
     var winWidth = $(window).width();
     var navWidth = $(".nav").width();
-    var slideWid = winWidth - navWidth;
+    var slideWid = winWidth - '50px';
     var slideHei = '300px';
     $('#jssor_1').css({width:slideWid,height:slideHei});
     $('.slides').css({width:slideWid,height:slideHei});

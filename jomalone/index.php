@@ -35,9 +35,9 @@
     <div class="center">
       <section class="mainSlide clear">
         <div class="slideBox">
-          <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1400px;height:500px;overflow:hidden;visibility:hidden;">
+          <div id="jssor_1">
             <!-- Loading Screen -->
-            <div class="slides" data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1400px;height:500px;overflow:hidden;">
+            <div class="slides" data-u="slides">
               <div>
                 <img src="/jomalone/img/main_slider_01.jpg" data-u="image">
               </div>
