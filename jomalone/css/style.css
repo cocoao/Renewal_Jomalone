@@ -65,7 +65,7 @@ header .gnbBox-2d .deapt-2 li:nth-child(7){top: 61%;;}
 
 /* slider style */
 .jssor_1{position:relative;margin:0 auto;top:0px;left:0px;width:100vw;overflow:hidden;visibility:hidden;}
-.slides{cursor:default;position:relative;top:110px;left:0px;width:100vw;overflow:hidden;}
+.slides{cursor:default;position:relative;left:0px;width:100vw;overflow:hidden;}
 .jssorb051 .i {position:absolute;cursor:pointer;}
 .jssorb051 .i .b {fill:#fff;fill-opacity:0.3;}
 .jssorb051 .i:hover .b {fill-opacity:.7;}

@@ -74,7 +74,6 @@
   .logoBox{width: 100%; left: 0; height: 60px;}
   .logoBox .logo{padding: 10px 0;}
   .pixHeader.logoBox{width: 100%;}
-
   header{left: 0;}
   header .nav{background: 0; box-shadow: none; width: 100%; position: relative;}
   header .miniGnb{height: 60px; padding: 0 10px; z-index: 1000; left: 0;}
