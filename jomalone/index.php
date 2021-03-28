@@ -6,8 +6,8 @@
   <title>Jo Malone</title>
 
   <!-- favicon link -->
-  <link rel="icon" href="/jomalone/img/jomalone_favicon.ico">
-  <link rel="apple-touch-icon" href="/jomalone/img/jomalone_favicon.ico">
+  <link rel="icon" href="/jomalone/img/jomalone_favicon.png">
+  <link rel="apple-touch-icon" href="/jomalone/img/jomalone_favicon.png">
 
   <!-- font awesome link -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">

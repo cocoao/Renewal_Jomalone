@@ -27,8 +27,32 @@
 .productFilter .button-group button:hover,.productFilter .button-group button.active{font-weight: 600; font-size: 15px;}
 
 .productBoxes{margin: 50px 10% 140px; width: 80%; height: auto !important ; display: flex; flex-wrap: wrap; z-index: 100; float: left; align-items: center;}
-.productBoxes .productBox{width: calc(33.33% - 20px); height: auto; _border: 1px solid #111; margin: 10px; position: relative; cursor: pointer;left:0 !important; top:0 !important}
+.productBoxes .productBox{width: calc(33.33% - 20px); height: auto; _border: 1px solid #111; margin: 10px; position: relative; cursor: pointer;left:0 !important; top:0 !important; float: left;}
 .productBoxes .productBox img{width: 100%;}
 .productBoxes .productBox .hoverBox{width: 100%; background: rgba(0,0,0); position: absolute; height: 100%; _display: flex; justify-content: center; align-items: center; display: none; animation:fadein2 0.8s 1; animation-fill-mode: forwards;}
 .productBoxes .productBox .hoverBox h3{font-family: 'lora'; font-weight: 400; font-size: 18px; color: #fcf9ef; z-index: 300; border: 1px solid #fcf9ef; width: 95%; height: 95%; display: flex; justify-content: center; align-items: center; text-align: center;padding: 20px;}
 .productBoxes .productBox:hover .hoverBox{display: flex;}
+
+
+/* detail page style */
+.topBar{height: 50px; overflow: hidden;}
+.bottomBar{height: 150px; overflow: hidden;}
+.detailSection{width: 70%; height: auto; display: flex; justify-content: space-between; _align-items: center; margin: 0 auto; padding: 80px 0;}
+.detailImgBox{width: 49%;}
+.detailImgBox img{width: 100%; display: none;}
+.detailTxtBox{width: 49%;padding: 30px;}
+.detailTxtBox h4{font-size: 24px; font-family: 'lora'; font-weight: 400;}
+.detailTxtBox p{font-size: 14px; font-family: 'lato'; padding: 20px 0 30px 0; line-height: 1.5;}
+.detailTxtBox .mlBtns button{outline: 0; border: 1px solid #111; background: none; text-transform: uppercase; width: 70px; padding: 3px 0; margin-right: 5px; font-size: 12px; transition: all 0.4s;}
+.detailTxtBox .mlBtns button:hover,.detailTxtBox .mlBtns button.active{background: #111; color: #fff;}
+.detailTxtBox .noteBox{width: 90%; display: flex; justify-content: space-between; align-items: center; margin-top: 50px; position: relative;}
+.detailTxtBox .noteBox>div{width: 30%;}
+.detailTxtBox .noteBox em{text-align: center; font-size: 12px; padding: 10px 0; font-style: normal; width: 100%; display: block; text-transform: uppercase;}
+.detailTxtBox .noteBox .noteImg{width: 100%; height: 100%; border-radius: 50%; _border: 1px solid #555; position: relative; overflow: hidden;}
+.detailTxtBox .noteBox .noteImg img{width: 100%;}
+.detailTxtBox .noteBox .noteImg .noteName{background: rgba(0,0,0,0.7); color: #fff; text-align: center; position: absolute; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; transform: rotate3d(0, -1, 0, 180deg); transition: all 0.5s; opacity: 0; border-radius: 50%;}
+.detailTxtBox .noteBox .noteDesc{padding: 10px; font-size: 14px; position: absolute; display: none; left: 0; transition: all 0.5s;}
+.detailTxtBox .note:hover .noteName{transform: rotate3d(0, 0, 0, 0deg); opacity: 1;}
+.detailTxtBox .note:hover .noteDesc{display: block;}
+
+.prevPage{position: absolute; right: 0; padding: 10px 80px; font-size: 30px;}

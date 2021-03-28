@@ -115,3 +115,15 @@ let filterSelect = document.location.href.split("=")[1];
 });
 
 });
+
+$(function(){
+  $('.mlBtns button').click(function(){
+    let className = $(this).attr('class');
+    console.log(className);
+    $('.detailImgBox img').css({'display':'none'});
+    $('.detailImgBox .' + className).css({'display':'block'});
+    $('.mlBtns button').removeClass('active');
+    $(this).addClass('active');
+  });
+  $('.mlBtns button.ml100').trigger('click');
+});

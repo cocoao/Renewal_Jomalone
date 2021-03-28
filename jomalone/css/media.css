@@ -4,6 +4,8 @@
   .texBox .titBox h3{font-size: 34px;}
   .boutique{padding: 20px 0;}
   footer .footerBtn a{margin-left: 15px;}
+
+  .detailSection{width: 90%;}
 }
 
 @media screen and (max-width : 900px){
@@ -29,6 +31,10 @@
   .slide h4{padding-right: 15px;}
   .productFilter{width: 80%;}
   .productBoxes .productBox{width: calc(50% - 20px);}
+
+  .detailTxtBox .noteBox{width: 100%;}
+  .detailTxtBox .noteBox .noteDesc{font-size: 12px;}
+  .detailTxtBox .noteBox .noteImg .noteName{font-size: 12px;}
 }
 
 @media screen and (max-width : 750px){
@@ -46,6 +52,10 @@
   /* fragrance page */
   .productFilter{width: 90%;}
   .productBoxes{width: 90%; margin: 50px 5%;}
+
+  .detailSection{flex-direction: column; width: 70%; margin: 0 auto;}
+  .detailImgBox{width: 100%;}
+  .detailTxtBox{width: 100%; display: flex; justify-content: center; flex-direction: column; align-items: center; text-align: center;}
 }
 
 @media screen and (max-width : 600px){
@@ -109,4 +119,6 @@
   .slide .scentxtBox{flex-wrap: wrap;}
   .slide h4{padding: 0; font-size: 25px; text-align: center; width: 100%; padding-bottom: 10px;}
   .slide p{text-align: center; width: 100%;}
+
+  .detailSection{width: 85%;} 
 }

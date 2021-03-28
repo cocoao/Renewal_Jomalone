@@ -6,8 +6,8 @@
   <title>Jo Malone</title>
 
   <!-- favicon link -->
-  <link rel="icon" href="/jomalone/img/jomalone_favicon.ico">
-  <link rel="apple-touch-icon" href="/jomalone/img/jomalone_favicon.ico">
+  <link rel="icon" href="/jomalone/img/jomalone_favicon.png">
+  <link rel="apple-touch-icon" href="/jomalone/img/jomalone_favicon.png">
 
   <!-- font awesome link -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -126,158 +126,27 @@
             </button>
           </div>
         </div><!-- end of filter -->
-        
-        <div class="productBoxes">
-          <div class="productBox woody">
-            <span class="hoverBox">
-              <h3>154</h3>
+        <div class="productBoxes clear">
+        <?php
+          include $_SERVER['DOCUMENT_ROOT'].'/jomalone/include/db_connect.php';
+          $sql = 'select* from jomalone_fragrance order by jo_num';
+          
+          $result_sql = mysqli_query($dbConn,$sql);
+          while($result_row=mysqli_fetch_array($result_sql)){
+            $num=$result_row['jo_num'];
+            $name=$result_row['jo_name'];
+            $type=$result_row['jo_type'];
+            $imgName=$result_row['jo_img'];
+        ?>
+          <div class="productBox <?=$type?>">
+            <span class="hoverBox" onclick="javacsript:location.href='/jomalone/pages/fra_detail.php?num=<?=$num?>'">
+              <h3><?=$name?></h3>
             </span>
-            <img src="/jomalone/img/products/prod_scent_154.jpg" alt="154">
+            <img src="/jomalone/img/products/prod_scent_<?=$imgName?>.jpg" alt="<?=$imgName?>">
           </div><!--  -->
-          <div class="productBox citrus">
-            <span class="hoverBox">
-              <h3>Grapefruit</h3>
-            </span>
-            <img src="/jomalone/img/products/prod_scent_gf.jpg" alt="Grapefruit">
-          </div><!--  -->
-          <div class="productBox fruity">
-            <span class="hoverBox">
-              <h3>Nectarine Blossom & Honey</h3>
-            </span>
-            <img src="/jomalone/img/products/prod_scent_nbh.jpg" alt="Nectarine Blossom & Honey">
-          </div><!--  -->
-          <div class="productBox woody">
-            <span class="hoverBox">
-              <h3>Dark Amber & Ginger Lily</h3>
-            </span>
-            <img src="/jomalone/img/products/prod_scent_dagl.jpg" alt="Dark Amber & Ginger Lily">
-          </div><!--  -->
-          <div class="productBox citrus">
-            <span class="hoverBox">
-              <h3>Lime Basil & Mandarin</h3>
-            </span>
-            <img src="/jomalone/img/products/prod_scent_lbm.jpg" alt="Lime Basil & Mandarin">
-          </div><!--  -->
-          <div class="productBox lightFloral">
-            <span class="hoverBox">
-              <h3>Red Roses</h3>
-            </span>
-            <img src="/jomalone/img/products/prod_scent_rr.jpg" alt="Red Roses">
-          </div><!--  -->
-          <div class="productBox woody">
-            <span class="hoverBox">
-              <h3>Myrrh & Tonka</h3>
-            </span>
-            <img src="/jomalone/img/products/prod_scent_mt.jpg" alt="Myrrh & Tonka">
-          </div><!--  -->
-          <div class="productBox floral">
-            <span class="hoverBox">
-              <h3>Mimosa & Cardamom</h3>
-            </span>
-            <img src="/jomalone/img/products/prod_scent_mc.jpg" alt="Mimosa & Cardamom">
-          </div><!--  -->
-          <div class="productBox citrus">
-            <span class="hoverBox">
-              <h3>Basil & Neroli</h3>
-            </span>
-            <img src="/jomalone/img/products/prod_scent_wsss.jpg" alt="Basil & Neroli">
-          </div><!--  -->
-          <div class="productBox woody">
-            <span class="hoverBox">
-              <h3>Vetiver & Golden Vanilla</h3>
-            </span>
-            <img src="/jomalone/img/products/prod_scent_vgv.jpg" alt="Vetiver & Golden Vanilla">
-          </div><!--  -->
-          <div class="productBox floral">
-            <span class="hoverBox">
-              <h3>Velvet Rose & Oud</h3>
-            </span>
-            <img src="/jomalone/img/products/prod_scent_vro.jpg" alt="Velvet Rose & Oud">
-          </div><!--  -->
-          <div class="productBox fruity">
-            <span class="hoverBox">
-              <h3>Blackberry & Bay</h3>
-            </span>
-            <img src="/jomalone/img/products/prod_scent_bb.jpg" alt="Blackberry & Bay">
-          </div><!--  -->
-          <div class="productBox spicy">
-            <span class="hoverBox">
-              <h3>Amber & Lavender</h3>
-            </span>
-            <img src="/jomalone/img/products/prod_scent_al.jpg" alt="Amber & Lavender">
-          </div><!--  -->
-          <div class="productBox citrus">
-            <span class="hoverBox">
-              <h3>Earlgrey & Cucumber</h3>
-            </span>
-            <img src="/jomalone/img/products/prod_scent_egc.jpg" alt="Earlgrey & Cucumber">
-          </div><!--  -->
-          <div class="productBox woody">
-            <span class="hoverBox">
-              <h3>Oud & Bergamot</h3>
-            </span>
-            <img src="/jomalone/img/products/prod_scent_oub.jpg" alt="Oud & Bergamot">
-          </div><!--  -->
-          <div class="productBox floral">
-            <span class="hoverBox">
-              <h3>Orange Blossom</h3>
-            </span>
-            <img src="/jomalone/img/products/prod_scent_ob.jpg" alt="Orange Blossom">
-          </div><!--  -->
-          <div class="productBox lightFloral">
-            <span class="hoverBox">
-              <h3>Wild Bluebell</h3>
-            </span>
-            <img src="/jomalone/img/products/prod_scent_wb.jpg" alt="Wild Bluebell">
-          </div><!--  -->
-          <div class="productBox woody">
-            <span class="hoverBox">
-              <h3>Wood Sage & Sea Salt</h3>
-            </span>
-            <img src="/jomalone/img/products/prod_scent_wsss.jpg" alt="Wood Sage & Sea Salt">
-          </div><!--  -->
-          <div class="productBox spicy">
-            <span class="hoverBox">
-              <h3>English Oak & Hazelnut</h3>
-            </span>
-            <img src="/jomalone/img/products/prod_scent_eoh.jpg" alt="English Oak & Hazelnut">
-          </div><!--  -->
-          <div class="productBox fruity">
-            <span class="hoverBox">
-              <h3>English Pear & Freesia</h3>
-            </span>
-            <img src="/jomalone/img/products/prod_scent_epf.jpg" alt="English Pear & Freesia">
-          </div><!--  -->
-          <div class="productBox floral">
-            <span class="hoverBox">
-              <h3>Tuberose Angelica</h3>
-            </span>
-            <img src="/jomalone/img/products/prod_scent_ta.jpg" alt="Tuberose Angelica">
-          </div><!--  -->
-          <div class="productBox woody">
-            <span class="hoverBox">
-              <h3>Pomegranate Noir</h3>
-            </span>
-            <img src="/jomalone/img/products/prod_scent_pn.jpg" alt="Pomegranate Noir">
-          </div><!--  -->
-          <div class="productBox lightFloral">
-            <span class="hoverBox">
-              <h3>Poppy & Barley</h3>
-            </span>
-            <img src="/jomalone/img/products/prod_scent_pb.jpg" alt="Poppy & Barley">
-          </div><!--  -->
-          <div class="productBox floral">
-            <span class="hoverBox">
-              <h3>Peony & Blushsuede</h3>
-            </span>
-            <img src="/jomalone/img/products/prod_scent_pbs.jpg" alt="Peony & Blushsuede">
-          </div><!--  -->
-          <div class="productBox floral">
-            <span class="hoverBox">
-              <h3>Honeysuckle & Davana</h3>
-            </span>
-            <img src="/jomalone/img/products/prod_scent_hsd.jpg" alt="Honeysuckle & Davana">
-          </div><!--  -->
+          <?php
+          }
+          ?>
         </div><!-- end of products -->
       </section>
     </div>
